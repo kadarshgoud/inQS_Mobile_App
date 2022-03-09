@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Selbstversorgung_3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    xmlns:manager="clr-namespace:App6.Management"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="BackButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_back_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            LineBreakMode="TailTruncation"
+                            Text="(3/5) Selbstversorgung"
+                            TextColor="White"/>
+                        <Label
+                            x:Name="BogenLabel"
+                            FontAttributes="Italic"
+                            FontSize="10"
+                            LineBreakMode="WordWrap"
+                            Text="Erhebungsbogen zur Qualitätserfassung"
+                            TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="ForwardButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_forward_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ForwardButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <AbsoluteLayout Grid.Row="1" IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}">
+                    <StackLayout
+                        Margin="5"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        VerticalOptions="FillAndExpand">
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t04field01"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="4.1 Waschen des vorderen Oberkörpers"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t04Picker01"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T04Picker01_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t04field02"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="4.2 Körperpflege im Bereich des Kopfes(Kämmen, Zahnpflege/ Prothesenreinigung,Rasieren) "
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t04Picker02"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T04Picker02_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t04field03"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="4.3 Waschen des Intimbereichs"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t04Picker03"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T04Picker03_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t04field04"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="4.4 Duschen oder Baden einschließlich  Waschen der Haare"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t04Picker04"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T04Picker04_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t04field05"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="4.5 An- und Auskleiden des Oberkörpers"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t04Picker05"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T04Picker05_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                    <ContentView
+                        x:Name="actIndBackground"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="White"
+                        IsVisible="{Binding IsLoading}"
+                        Opacity="0.5"/>
+                    <ActivityIndicator
+                        x:Name="actInd"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsRunning="{Binding IsLoading}"
+                        IsVisible="{Binding IsLoading}"
+                        Color="Red"/>
+                </AbsoluteLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

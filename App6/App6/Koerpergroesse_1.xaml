@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Koerpergroesse_1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    xmlns:manager="clr-namespace:App6.Management"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="BackButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_back_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            LineBreakMode="TailTruncation"
+                            Text="(1/1) Körpergröße und Gewicht"
+                            TextColor="White"/>
+                        <Label
+                            x:Name="BogenLabel"
+                            FontAttributes="Italic"
+                            FontSize="10"
+                            LineBreakMode="WordWrap"
+                            Text="Erhebungsbogen zur Qualitätserfassung"
+                            TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="SaveAllButton"
+                            Margin="0,0,15,0"
+                            HeightRequest="35"
+                            Source="ic_done_all.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SaveDataAndGoToMenuButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <AbsoluteLayout
+                    Grid.Row="1"
+                    HeightRequest="1000"
+                    IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}">
+                    <StackLayout
+                        Margin="5"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        VerticalOptions="FillAndExpand">
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t08field01"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="8.1 Körpergröße in cm"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Entry
+                            x:Name="t08Entry01"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            FontSize="16"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Placeholder="Körpergröße"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            Unfocused="Entryt08field01_Unfocused"
+                            VerticalOptions="CenterAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t08field02"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="8.2 Aktuelles Körpergewicht in kg: "
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Entry
+                            x:Name="t08Entry02"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            FontSize="16"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Placeholder="Körpergewicht"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            Unfocused="Entryt08field02_01_Unfocused"
+                            VerticalOptions="CenterAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="Label_t08field02_02"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Dokumentiert am (Datum):      "
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Grid Margin="0,0,10,0" HeightRequest="75">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <DatePicker
+                                x:Name="DatePicker_t08field02_02"
+                                Grid.Column="0"
+                                Margin="10,0,10,0"
+                                DateSelected="DatePicker_t08field02_02_DateSelected"
+                                IsVisible="False"
+                                Unfocused="DatePicker_t08field02_02_Unfocused"
+                                VerticalOptions="End"/>
+                            <Entry
+                                x:Name="Entry_t08field02_02"
+                                Grid.Column="0"
+                                Margin="10,0,10,0"
+                                Focused="Entry_t08field02_02_Focused"
+                                FontAttributes="{Binding Font}"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="End"/>
+                            <Label
+                                x:Name="ResetLabel_t08field02_02"
+                                Grid.Column="1"
+                                Margin="10,0,10,0"
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="X"
+                                TextColor="Red"
+                                VerticalOptions="End">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ResetLabel_t08field02_02_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t08field03"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="8.3 Bitte wählen Sie, welche der folgenden Punkte laut Pflegeokumentation für den Bewohner im Verlauf der vergangenen 6 Monaten zutraf:"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t08Image03_1"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t08field03_1"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="WordWrap"
+                                Text="Medikamentöse Ausschwemmung / Diuretikatherapie"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t08Image03_2"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t08field03_2"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="WordWrap"
+                                Text="Diät aufgrund ärztlicher Anordnung"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t08Image03_3"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t08field03_3"
+                                Grid.Column="1"
+                                Margin="0,0,0,0"
+                                FontSize="16"
+                                LineBreakMode="WordWrap"
+                                Text="Erheblicher Gewichtsverlust (mind. 10%) während eines Krankenhausaufenthalts"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t08Image03_4"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t08field03_4"
+                                Grid.Column="1"
+                                Margin="0,0,0,0"
+                                FontSize="16"
+                                LineBreakMode="WordWrap"
+                                Text="Bewohner wird aufgrund einer Entscheidung des Arztes oder der Angehörigen oder eines Betreuers nicht mehr gewogen"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t08Image03_5"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t08field03_5"
+                                Grid.Column="1"
+                                Margin="0,0,0,0"
+                                FontSize="16"
+                                LineBreakMode="WordWrap"
+                                Text="Aktuelles Gewicht liegt nicht vor. Bewohner möchte nicht gewogen werden"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t08Image03_6"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t08field03_6"
+                                Grid.Column="1"
+                                FontSize="16"
+                                Text="Sonstiger Grund"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Label
+                            x:Name="t08field03_7"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text=" Beschreibung sonstiger Grund:"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Entry
+                            x:Name="t08field04"
+                            Margin="10,0,10,0"
+                            BackgroundColor="#e9e9e9"
+                            FontAttributes="{Binding Font}"
+                            FontSize="16"
+                            HeightRequest="200"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Placeholder="Beschreibung"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                    <ContentView
+                        x:Name="actIndBackground"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="White"
+                        IsVisible="{Binding IsLoading}"
+                        Opacity="0.5"/>
+                    <ActivityIndicator
+                        x:Name="actInd"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsRunning="{Binding IsLoading}"
+                        IsVisible="{Binding IsLoading}"
+                        Color="Red"/>
+                </AbsoluteLayout>
+                <Grid Grid.Row="2">
+                    <Button
+                        x:Name="ResetButton"
+                        Margin="10"
+                        BackgroundColor="#d4000f"
+                        BorderRadius="30"
+                        Clicked="ResetAllDataFromCategoryButton_TappedAsync"
+                        FontFamily="MediumFontFamily"
+                        FontSize="12"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Image="ic_reset.png"
+                        Text="Daten zurücksetzen"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

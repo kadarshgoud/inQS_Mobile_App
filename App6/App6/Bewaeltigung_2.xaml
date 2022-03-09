@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Bewaeltigung_2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    xmlns:manager="clr-namespace:App6.Management"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="BackButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_back_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            LineBreakMode="TailTruncation"
+                            Text="(2/6) Bewältigung von und selbständiger Umgang mit krankheits- und therapiebedingten Anforderungen und Belastungen"
+                            TextColor="White"/>
+                        <Label
+                            x:Name="BogenLabel"
+                            FontAttributes="Italic"
+                            FontSize="10"
+                            LineBreakMode="WordWrap"
+                            Text="Erhebungsbogen zur Qualitätserfassung"
+                            TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="ForwardButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_forward_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ForwardButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <AbsoluteLayout Grid.Row="1" IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}">
+                    <StackLayout
+                        Margin="5"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        VerticalOptions="FillAndExpand">
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t05field04_1"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="5.4 Absaugen und Sauerstoffgabe"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t05Picker04"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T05Picker04_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <Label
+                            x:Name="t05field04_2"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Häufigkeit der Hilfe (Anzahl eintragen)"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Entry
+                            x:Name="t05Entry04"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Keyboard="Numeric"
+                            Placeholder="Anzahl eintragen"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t05field05_1"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="5.5 Einreibungen, Kälte und Wärmeanwendungen"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t05Picker05"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T05Picker05_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <Label
+                            x:Name="t05field05_2"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Häufigkeit der Hilfe (Anzahl eintragen)"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Entry
+                            x:Name="t05Entry05"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Keyboard="Numeric"
+                            Placeholder="Anzahl eintragen"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t05field06_1"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="5.6 Messung und Deutung von Körperzuständen"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t05Picker06"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T05Picker06_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <Label
+                            x:Name="t05field06_2"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Häufigkeit der Hilfe (Anzahl eintragen)"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Entry
+                            x:Name="t05Entry06"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Keyboard="Numeric"
+                            Placeholder="Anzahl eintragen"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                    <ContentView
+                        x:Name="actIndBackground"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="White"
+                        IsVisible="{Binding IsLoading}"
+                        Opacity="0.5"/>
+                    <ActivityIndicator
+                        x:Name="actInd"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsRunning="{Binding IsLoading}"
+                        IsVisible="{Binding IsLoading}"
+                        Color="Red"/>
+                </AbsoluteLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

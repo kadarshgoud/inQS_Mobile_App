@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InformationButton" xml:space="preserve">
+    <value>Информационный проект</value>
+    <comment>Projektinformationen</comment>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>Авторизоваться</value>
+    <comment>Anmelden</comment>
+  </data>
+  <data name="LoginPageHeadline" xml:space="preserve">
+    <value>АВТОРИЗОВАТЬСЯ</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>пароль</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>регистр</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>имя пользователя</value>
+  </data>
+  <data name="SignInButton" xml:space="preserve">
+    <value>Войти в систему</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Логин неверный!</value>
+  </data>
+  <data name="LoginSuccess" xml:space="preserve">
+    <value>Вы были успешно зарегистрированы.</value>
+  </data>
+  <data name="RoleFour" xml:space="preserve">
+    <value>Роль пользователя 4</value>
+  </data>
+  <data name="RoleOne" xml:space="preserve">
+    <value>Роль пользователя 1</value>
+  </data>
+  <data name="RoleThree" xml:space="preserve">
+    <value>Роль пользователя 3</value>
+  </data>
+  <data name="RoleTwo" xml:space="preserve">
+    <value>Роль пользователя 2</value>
+  </data>
+  <data name="RegisterName" xml:space="preserve">
+    <value>Введите имя пользователя</value>
+  </data>
+  <data name="RegisterPageHeadline" xml:space="preserve">
+    <value>РЕГИСТРАЦИЯ</value>
+  </data>
+  <data name="RegisterPassword" xml:space="preserve">
+    <value>Введите свой пароль</value>
+  </data>
+  <data name="RegisterPasswordConfirm" xml:space="preserve">
+    <value>Повторите пароль</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>ЯЗЫК</value>
+    <comment>SPRACHE</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ОТМЕНА</value>
+    <comment>ABBRECHEN</comment>
+  </data>
+  <data name="LoginNotAvailable" xml:space="preserve">
+    <value>Войти в данный момент невозможно. Пожалуйста, повторите попытку позже.</value>
+  </data>
+  <data name="LoginNotYetAvailable" xml:space="preserve">
+    <value>Логин не доступен до 1 октября 2019 года. Повторите попытку позже.</value>
+  </data>
+  <data name="RegisterFailed" xml:space="preserve">
+    <value>Регистрация не удалась</value>
+    <comment>Registrierung fehlgeschlagen</comment>
+  </data>
+  <data name="RegisterSelectRole" xml:space="preserve">
+    <value>Пожалуйста, выберите роль пользователя.</value>
+    <comment>Bitte wählen Sie eine Benutzerrolle aus.</comment>
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>Регистрация прошла успешно</value>
+    <comment>Registrierung erfolgreich</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleFour" xml:space="preserve">
+    <value>Вы успешно зарегистрировались в роли пользователя 4. Пожалуйста, войдите сейчас.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 4 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleOne" xml:space="preserve">
+    <value>Вы успешно зарегистрировались в роли пользователя 1. Пожалуйста, войдите сейчас.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 1 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleThree" xml:space="preserve">
+    <value>Вы успешно зарегистрировались в роли пользователя 3. Пожалуйста, войдите сейчас.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 3 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleTwo" xml:space="preserve">
+    <value>Вы успешно зарегистрировались в роли пользователя 2. Пожалуйста, войдите сейчас.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 2 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegistrationNotYetAvailable" xml:space="preserve">
+    <value>Регистрация не доступна до 16 сентября 2019 года. Пожалуйста, повторите попытку позже.</value>
+    <comment>Die Registrierung ist erst ab dem 16. September 2019 möglich. Bitte versuchen Sie es später noch einmal.</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>ошибка</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="PasswordLowComplexity" xml:space="preserve">
+    <value>Ваш пароль должен содержать как минимум одно число (0-9) и один знак (например, @, §, $,%, #).</value>
+  </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>Пароль и пароль подтверждения не совпадают.</value>
+  </data>
+  <data name="PasswordShort" xml:space="preserve">
+    <value>Ваш пароль слишком короткий. Минимальная длина 6 символов.</value>
+  </data>
+  <data name="UsernameTaken" xml:space="preserve">
+    <value>Имя пользователя уже используется. Пожалуйста, измените имя пользователя.</value>
+  </data>
+  <data name="RegisterEmptyFields" xml:space="preserve">
+    <value>Пожалуйста, заполните все обязательные поля в регистрационной форме.</value>
+  </data>
+  <data name="RegisterUnknownInQSUser" xml:space="preserve">
+    <value>Имя пользователя не зарегистрировано в веб-системе InQS. Пожалуйста, используйте действительное имя пользователя.</value>
+  </data>
+  <data name="RegisterWrongRole" xml:space="preserve">
+    <value>Выбранная вами роль не соответствует роли в веб-системе InQS.</value>
+  </data>
+  <data name="RegisterContactDBFailure" xml:space="preserve">
+    <value>Пожалуйста, свяжитесь с администратором.</value>
+  </data>
+  <data name="LoginWrongAppVersion" xml:space="preserve">
+    <value>Если вы используете устаревшую версию приложения, пожалуйста, обновите его через Google Play Store.</value>
+  </data>
+  <data name="DatenschutzButton" xml:space="preserve">
+    <value>Положение о конфиденциальности</value>
+    <comment>Datenschutzerklärung</comment>
+  </data>
+  <data name="PreferenceLabelBenutzername" xml:space="preserve">
+    <value>Имя пользователя:</value>
+    <comment>Benutzername:</comment>
+  </data>
+  <data name="PreferenceLabelBenutzerrolle" xml:space="preserve">
+    <value>Роль пользователя:</value>
+    <comment>Benutzerrolle:</comment>
+  </data>
+  <data name="PreferenceLabelEinrichtung" xml:space="preserve">
+    <value>Учебное заведение:</value>
+    <comment>Einrichtung:</comment>
+  </data>
+  <data name="PreferenceLabelWohnbereich" xml:space="preserve">
+    <value>Район учреждения:</value>
+    <comment>Wohnbereich:</comment>
+  </data>
+  <data name="PreferenceLabel" xml:space="preserve">
+    <value>предпочтения</value>
+    <comment>Einstellungen</comment>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="InformationSaveQuery" xml:space="preserve">
+    <value>Хотите сохранить данные?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>да</value>
+  </data>
+  <data name="FieldsUnfilled" xml:space="preserve">
+    <value>Пожалуйста, ответьте на красный вопрос (ы).</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="ResetCategoryWarning" xml:space="preserve">
+    <value>Хотите сбросить данные категории?</value>
+    <comment>Wollen Sie die Daten der Kategorie wirklich zürucksetzen?</comment>
+  </data>
+  <data name="CreateSurvey" xml:space="preserve">
+    <value>Создать опросы</value>
+    <comment>Erhebungsbögen anlegen</comment>
+  </data>
+  <data name="ShowSurvey" xml:space="preserve">
+    <value>Показать опросы</value>
+    <comment>Erhebungsbögen anzeigen</comment>
+  </data>
+  <data name="SurveyHeadline" xml:space="preserve">
+    <value>Форма ввода данных для качественной записи</value>
+    <comment>Erhebungsbogen zur Qualitätserfassung</comment>
+  </data>
+  <data name="SurveyHeadlineFor" xml:space="preserve">
+    <value>за</value>
+    <comment>für</comment>
+  </data>
+  <data name="ResetCategoryImpossibleWarning" xml:space="preserve">
+    <value>Категория не может быть сброшена, потому что период оценки уже закончился.</value>
+  </data>
+  <data name="AppError" xml:space="preserve">
+    <value>ошибка</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="AppErrorMsg" xml:space="preserve">
+    <value>Произошла ошибка. Пожалуйста, проверьте подключение к Интернету или исправьте свой ввод и попробуйте снова.</value>
+  </data>
+  <data name="SurveyHeadlineWithoutQE" xml:space="preserve">
+    <value>Форма ввода данных без качественной записи</value>
+    <comment>Erhebungsbogen ohne Qualitätserfassung</comment>
+  </data>
+</root>

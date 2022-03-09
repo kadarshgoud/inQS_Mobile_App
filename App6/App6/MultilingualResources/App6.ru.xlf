@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ru" original="APP6/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6914.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="APP6/RESOURCES/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="InformationButton" translate="yes" xml:space="preserve">
+          <source>Project Information</source>
+          <target state="final">Информационный проект</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Projektinformationen</note>
+        </trans-unit>
+        <trans-unit id="LoginButton" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="final">Авторизоваться</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Anmelden</note>
+        </trans-unit>
+        <trans-unit id="LoginPageHeadline" translate="yes" xml:space="preserve">
+          <source>LOGIN</source>
+          <target state="final">АВТОРИЗОВАТЬСЯ</target>
+        </trans-unit>
+        <trans-unit id="Password" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="final">пароль</target>
+        </trans-unit>
+        <trans-unit id="RegisterButton" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="final">регистр</target>
+        </trans-unit>
+        <trans-unit id="Username" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <target state="final">имя пользователя</target>
+        </trans-unit>
+        <trans-unit id="SignInButton" translate="yes" xml:space="preserve">
+          <source>Sign In</source>
+          <target state="final">Войти в систему</target>
+        </trans-unit>
+        <trans-unit id="LoginFailed" translate="yes" xml:space="preserve">
+          <source>Login credentials are incorrect!</source>
+          <target state="final">Логин неверный!</target>
+        </trans-unit>
+        <trans-unit id="LoginSuccess" translate="yes" xml:space="preserve">
+          <source>You have been successfully registered.</source>
+          <target state="final">Вы были успешно зарегистрированы.</target>
+        </trans-unit>
+        <trans-unit id="RoleFour" translate="yes" xml:space="preserve">
+          <source>User Role 4</source>
+          <target state="final">Роль пользователя 4</target>
+        </trans-unit>
+        <trans-unit id="RoleOne" translate="yes" xml:space="preserve">
+          <source>User Role 1</source>
+          <target state="final">Роль пользователя 1</target>
+        </trans-unit>
+        <trans-unit id="RoleThree" translate="yes" xml:space="preserve">
+          <source>User Role 3</source>
+          <target state="final">Роль пользователя 3</target>
+        </trans-unit>
+        <trans-unit id="RoleTwo" translate="yes" xml:space="preserve">
+          <source>User Role 2</source>
+          <target state="final">Роль пользователя 2</target>
+        </trans-unit>
+        <trans-unit id="RegisterName" translate="yes" xml:space="preserve">
+          <source>Enter username</source>
+          <target state="final">Введите имя пользователя</target>
+        </trans-unit>
+        <trans-unit id="RegisterPageHeadline" translate="yes" xml:space="preserve">
+          <source>REGISTRATION</source>
+          <target state="final">РЕГИСТРАЦИЯ</target>
+        </trans-unit>
+        <trans-unit id="RegisterPassword" translate="yes" xml:space="preserve">
+          <source>Enter your password</source>
+          <target state="final">Введите свой пароль</target>
+        </trans-unit>
+        <trans-unit id="RegisterPasswordConfirm" translate="yes" xml:space="preserve">
+          <source>Repeat password</source>
+          <target state="final">Повторите пароль</target>
+        </trans-unit>
+        <trans-unit id="Language" translate="yes" xml:space="preserve">
+          <source>LANGUAGE</source>
+          <target state="final">ЯЗЫК</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SPRACHE</note>
+        </trans-unit>
+        <trans-unit id="Cancel" translate="yes" xml:space="preserve">
+          <source>CANCEL</source>
+          <target state="final">ОТМЕНА</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ABBRECHEN</note>
+        </trans-unit>
+        <trans-unit id="LoginNotAvailable" translate="yes" xml:space="preserve">
+          <source>Login is currently not possible. Please try again later.</source>
+          <target state="final">Войти в данный момент невозможно. Пожалуйста, повторите попытку позже.</target>
+        </trans-unit>
+        <trans-unit id="LoginNotYetAvailable" translate="yes" xml:space="preserve">
+          <source>Login is not available until 1 October 2019. Please try again later.</source>
+          <target state="final">Логин не доступен до 1 октября 2019 года. Повторите попытку позже.</target>
+        </trans-unit>
+        <trans-unit id="RegisterFailed" translate="yes" xml:space="preserve">
+          <source>Registration failed</source>
+          <target state="final">Регистрация не удалась</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Registrierung fehlgeschlagen</note>
+        </trans-unit>
+        <trans-unit id="RegisterSelectRole" translate="yes" xml:space="preserve">
+          <source>Please select a user role.</source>
+          <target state="final">Пожалуйста, выберите роль пользователя.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Bitte wählen Sie eine Benutzerrolle aus.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccess" translate="yes" xml:space="preserve">
+          <source>Registration successful</source>
+          <target state="final">Регистрация прошла успешно</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Registrierung erfolgreich</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleFour" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 4. Please log in now.</source>
+          <target state="final">Вы успешно зарегистрировались в роли пользователя 4. Пожалуйста, войдите сейчас.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 4 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleOne" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 1. Please log in now.</source>
+          <target state="final">Вы успешно зарегистрировались в роли пользователя 1. Пожалуйста, войдите сейчас.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 1 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleThree" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 3. Please log in now.</source>
+          <target state="final">Вы успешно зарегистрировались в роли пользователя 3. Пожалуйста, войдите сейчас.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 3 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleTwo" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 2. Please log in now.</source>
+          <target state="final">Вы успешно зарегистрировались в роли пользователя 2. Пожалуйста, войдите сейчас.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 2 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegistrationNotYetAvailable" translate="yes" xml:space="preserve">
+          <source>Registration is not available until 16 September 2019. Please try again later.</source>
+          <target state="final">Регистрация не доступна до 16 сентября 2019 года. Пожалуйста, повторите попытку позже.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Die Registrierung ist erst ab dem 16. September 2019 möglich. Bitte versuchen Sie es später noch einmal.</note>
+        </trans-unit>
+        <trans-unit id="Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="final">ошибка</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Fehler</note>
+        </trans-unit>
+        <trans-unit id="PasswordLowComplexity" translate="yes" xml:space="preserve">
+          <source>Your password should contain at least one number (0-9) and one sign (like @, §, $, %, #).</source>
+          <target state="final">Ваш пароль должен содержать как минимум одно число (0-9) и один знак (например, @, §, $,%, #).</target>
+        </trans-unit>
+        <trans-unit id="PasswordNoMatch" translate="yes" xml:space="preserve">
+          <source>The password and confirmation password do not match.</source>
+          <target state="final">Пароль и пароль подтверждения не совпадают.</target>
+        </trans-unit>
+        <trans-unit id="PasswordShort" translate="yes" xml:space="preserve">
+          <source>Your password is too short. Minimum length is 6 character.</source>
+          <target state="final">Ваш пароль слишком короткий. Минимальная длина 6 символов.</target>
+        </trans-unit>
+        <trans-unit id="UsernameTaken" translate="yes" xml:space="preserve">
+          <source>Username is already taken. Please change username.</source>
+          <target state="final">Имя пользователя уже используется. Пожалуйста, измените имя пользователя.</target>
+        </trans-unit>
+        <trans-unit id="RegisterEmptyFields" translate="yes" xml:space="preserve">
+          <source>Please fill out all required fields in the registration form.</source>
+          <target state="final">Пожалуйста, заполните все обязательные поля в регистрационной форме.</target>
+        </trans-unit>
+        <trans-unit id="RegisterUnknownInQSUser" translate="yes" xml:space="preserve">
+          <source>Username is not registered in the InQS Web System. Please use valid username.</source>
+          <target state="final">Имя пользователя не зарегистрировано в веб-системе InQS. Пожалуйста, используйте действительное имя пользователя.</target>
+        </trans-unit>
+        <trans-unit id="RegisterWrongRole" translate="yes" xml:space="preserve">
+          <source>Your selected role is not corresponding to the role in the InQS Web System.</source>
+          <target state="final">Выбранная вами роль не соответствует роли в веб-системе InQS.</target>
+        </trans-unit>
+        <trans-unit id="RegisterContactDBFailure" translate="yes" xml:space="preserve">
+          <source>Please contact admin.</source>
+          <target state="final">Пожалуйста, свяжитесь с администратором.</target>
+        </trans-unit>
+        <trans-unit id="LoginWrongAppVersion" translate="yes" xml:space="preserve">
+          <source>You are using an outdated app version, please update your app via the Google Play Store.</source>
+          <target state="final">Если вы используете устаревшую версию приложения, пожалуйста, обновите его через Google Play Store.</target>
+        </trans-unit>
+        <trans-unit id="DatenschutzButton" translate="yes" xml:space="preserve">
+          <source>Privacy statement</source>
+          <target state="final">Положение о конфиденциальности</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Datenschutzerklärung</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelBenutzername" translate="yes" xml:space="preserve">
+          <source>Username:</source>
+          <target state="needs-review-translation">Имя пользователя:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Benutzername:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelBenutzerrolle" translate="yes" xml:space="preserve">
+          <source>User role:</source>
+          <target state="final">Роль пользователя:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Benutzerrolle:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelEinrichtung" translate="yes" xml:space="preserve">
+          <source>Institution:</source>
+          <target state="final">Учебное заведение:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Einrichtung:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelWohnbereich" translate="yes" xml:space="preserve">
+          <source>Institution area:</source>
+          <target state="final">Район учреждения:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Wohnbereich:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabel" translate="yes" xml:space="preserve">
+          <source>Preferences</source>
+          <target state="final">предпочтения</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Einstellungen</note>
+        </trans-unit>
+        <trans-unit id="Information" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <target state="final">Информация</target>
+        </trans-unit>
+        <trans-unit id="InformationSaveQuery" translate="yes" xml:space="preserve">
+          <source>Would you like to save the data?</source>
+          <target state="final">Хотите сохранить данные?</target>
+        </trans-unit>
+        <trans-unit id="No" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="final">нет</target>
+        </trans-unit>
+        <trans-unit id="Yes" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="final">да</target>
+        </trans-unit>
+        <trans-unit id="FieldsUnfilled" translate="yes" xml:space="preserve">
+          <source>Please answer the red marked question item(s).</source>
+          <target state="final">Пожалуйста, ответьте на красный вопрос (ы).</target>
+        </trans-unit>
+        <trans-unit id="Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="final">Предупреждение</target>
+        </trans-unit>
+        <trans-unit id="ResetCategoryWarning" translate="yes" xml:space="preserve">
+          <source>Would you like to reset the category data?</source>
+          <target state="final">Хотите сбросить данные категории?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Wollen Sie die Daten der Kategorie wirklich zürucksetzen?</note>
+        </trans-unit>
+        <trans-unit id="CreateSurvey" translate="yes" xml:space="preserve">
+          <source>Create Surveys</source>
+          <target state="final">Создать опросы</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbögen anlegen</note>
+        </trans-unit>
+        <trans-unit id="ShowSurvey" translate="yes" xml:space="preserve">
+          <source>Show Surveys</source>
+          <target state="final">Показать опросы</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbögen anzeigen</note>
+        </trans-unit>
+        <trans-unit id="SurveyHeadline" translate="yes" xml:space="preserve">
+          <source>Data entry form for quality recording</source>
+          <target state="final">Форма ввода данных для качественной записи</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbogen zur Qualitätserfassung</note>
+        </trans-unit>
+        <trans-unit id="SurveyHeadlineFor" translate="yes" xml:space="preserve">
+          <source>for</source>
+          <target state="final">за</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">für</note>
+        </trans-unit>
+        <trans-unit id="ResetCategoryImpossibleWarning" translate="yes" xml:space="preserve">
+          <source>The category cannot be reset because the evaluation period is already over.</source>
+          <target state="final">Категория не может быть сброшена, потому что период оценки уже закончился.</target>
+        </trans-unit>
+        <trans-unit id="AppError" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="final">ошибка</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Fehler</note>
+        </trans-unit>
+        <trans-unit id="AppErrorMsg" translate="yes" xml:space="preserve">
+          <source>An error has occurred. Please check your internet connection or correct your input and try again.</source>
+          <target state="final">Произошла ошибка. Пожалуйста, проверьте подключение к Интернету или исправьте свой ввод и попробуйте снова.</target>
+        </trans-unit>
+        <trans-unit id="SurveyHeadlineWithoutQE" translate="yes" xml:space="preserve">
+          <source>Data entry form without quality recording</source>
+          <target state="final">Форма ввода данных без качественной записи</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbogen ohne Qualitätserfassung</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

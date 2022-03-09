@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.SearchPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="SearchPagePage"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="44"/>
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="0"
+                BackgroundColor="#d4000f"
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="80*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Column="0"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Image
+                        x:Name="BackButton"
+                        HeightRequest="40"
+                        Source="ic_arrow_back_ios.png"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        LineBreakMode="TailTruncation"
+                        Text="Übersicht der Module"
+                        TextColor="White"/>
+                    <Label
+                        x:Name="ModulLabel"
+                        Margin="10,0,10,0"
+                        FontAttributes="Italic"
+                        FontSize="10"
+                        HorizontalOptions="CenterAndExpand"
+                        LineBreakMode="WordWrap"
+                        Text="Erhebungsbogen zur Qualitätserfassung"
+                        TextColor="White"/>
+                </StackLayout>
+            </Grid>
+            <AbsoluteLayout Grid.Row="1">
+                <StackLayout
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    VerticalOptions="FillAndExpand">
+                    <SearchBar
+                        x:Name="sb_search"
+                        Placeholder="Suche"
+                        TextChanged="Sb_search_TextChanged"/>
+                    <ListView
+                        x:Name="MyList"
+                        ItemTapped="MyList_ItemTappedAsync"
+                        RowHeight="60 ">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10" ColumnSpacing="5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                            Grid.Column="0"
+                                            HeightRequest="40"
+                                            HorizontalOptions="StartAndExpand"
+                                            Source="ic_action_list_alt.png"
+                                            WidthRequest="15"/>
+                                        <Label
+                                            Grid.Column="1"
+                                            Margin="15,0,0,0"
+                                            FontSize="10"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="{Binding Name}"
+                                            VerticalOptions="CenterAndExpand"/>
+                                        <ProgressBar
+                                            x:Name="ProgressBar1"
+                                            Grid.Column="2"
+                                            HorizontalOptions="EndAndExpand"
+                                            Progress="{Binding Level}"
+                                            VerticalOptions="CenterAndExpand"
+                                            WidthRequest="40"/>
+                                        <Label
+                                            Grid.Column="3"
+                                            Margin="5,0,0,0"
+                                            HorizontalOptions="EndAndExpand"
+                                            Text="{Binding Percent}"
+                                            VerticalOptions="CenterAndExpand"
+                                            WidthRequest="42"/>
+                                        <Image
+                                            Grid.Column="4"
+                                            HeightRequest="40"
+                                            HorizontalOptions="EndAndExpand"
+                                            Source="ic_action_arrow_forward_ios.png"
+                                            WidthRequest="15"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <BoxView BackgroundColor="Black" HeightRequest="1"/>
+                </StackLayout>
+                <ContentView
+                    x:Name="actIndBackground"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="White"
+                    IsVisible="{Binding IsLoading}"
+                    Opacity="0.5"/>
+                <ActivityIndicator
+                    x:Name="actInd"
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    IsRunning="{Binding IsLoading}"
+                    IsVisible="{Binding IsLoading}"
+                    Color="Red"/>
+            </AbsoluteLayout>
+            <Grid
+                Grid.Row="3"
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Column="0"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="photo1"
+                        HeightRequest="40"
+                        Source="ic_home1.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="photo2"
+                        HeightRequest="40"
+                        Source="ic_view_list1.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="3"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="photo3"
+                        HeightRequest="38"
+                        Source="ic_logout.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="photo4"
+                        HeightRequest="40"
+                        Source="ic_settings.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

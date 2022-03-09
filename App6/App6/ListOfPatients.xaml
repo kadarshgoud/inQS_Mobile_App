@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.ListOfPatients"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Management"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="unfinishedQETemplate">
+                <ViewCell>
+                    <Grid Padding="10" ColumnSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="40"
+                            HorizontalOptions="StartAndExpand"
+                            Source="ic_action_list_alt.png"
+                            WidthRequest="15"/>
+                        <Label
+                            Grid.Column="1"
+                            Margin="15,0,0,0"
+                            FontSize="10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="{Binding Bewohnerbezeichnung}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Image
+                            Grid.Column="4"
+                            HeightRequest="40"
+                            HorizontalOptions="EndAndExpand"
+                            Source="ic_action_arrow_forward_ios.png"
+                            WidthRequest="15"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="finishedQETemplate">
+                <ViewCell>
+                    <Grid Padding="10" ColumnSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="40"
+                            HorizontalOptions="StartAndExpand"
+                            Source="ic_action_list_alt_completed.png"
+                            WidthRequest="15"/>
+                        <Label
+                            Grid.Column="1"
+                            Margin="15,0,0,0"
+                            FontSize="10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="{Binding Bewohnerbezeichnung}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Image
+                            Grid.Column="4"
+                            HeightRequest="40"
+                            HorizontalOptions="EndAndExpand"
+                            Source="ic_action_arrow_forward_ios.png"
+                            WidthRequest="15"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="unfinishedNoQETemplate">
+                <ViewCell>
+                    <Grid Padding="10" ColumnSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="40"
+                            HorizontalOptions="StartAndExpand"
+                            Source="ic_action_list_no_qe.png"
+                            WidthRequest="15"/>
+                        <Label
+                            Grid.Column="1"
+                            Margin="15,0,0,0"
+                            FontSize="10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="{Binding Bewohnerbezeichnung}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Image
+                            Grid.Column="4"
+                            HeightRequest="40"
+                            HorizontalOptions="EndAndExpand"
+                            Source="ic_action_arrow_forward_ios.png"
+                            WidthRequest="15"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="finishedNoQETemplate">
+                <ViewCell>
+                    <Grid Padding="10" ColumnSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="40"
+                            HorizontalOptions="StartAndExpand"
+                            Source="ic_action_list_no_qe_completed.png"
+                            WidthRequest="15"/>
+                        <Label
+                            Grid.Column="1"
+                            Margin="15,0,0,0"
+                            FontSize="10"
+                            HorizontalOptions="StartAndExpand"
+                            Text="{Binding Bewohnerbezeichnung}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Image
+                            Grid.Column="4"
+                            HeightRequest="40"
+                            HorizontalOptions="EndAndExpand"
+                            Source="ic_action_arrow_forward_ios.png"
+                            WidthRequest="15"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <local:BewohnerStatusDataTemplateSelector
+                x:Key="bewohnerStatusDataTemplateSelector"
+                FinishedNoQETemplate="{StaticResource finishedNoQETemplate}"
+                FinishedQETemplate="{StaticResource finishedQETemplate}"
+                UnfinishedNoQETemplate="{StaticResource unfinishedNoQETemplate}"
+                UnfinishedQETemplate="{StaticResource unfinishedQETemplate}"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="44"/>
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="0"
+                BackgroundColor="#d4000f"
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Column="0"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Image
+                        x:Name="BackButton"
+                        HeightRequest="40"
+                        Source="ic_arrow_back_ios.png"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        LineBreakMode="TailTruncation"
+                        Text="Bewohnerübersicht"
+                        TextColor="White"/>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="2"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+            </Grid>
+            <AbsoluteLayout Grid.Row="1">
+                <StackLayout
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    VerticalOptions="FillAndExpand">
+                    <SearchBar
+                        x:Name="sb_search"
+                        Placeholder="Suche"
+                        TextChanged="Sb_search_TextChanged"/>
+                    <Grid HorizontalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            x:Name="OpenButtonImage"
+                            Grid.Column="1"
+                            HeightRequest="25"
+                            Opacity="0.6"
+                            Source="ic_check_box.png"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OpenButtonImage_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label
+                            x:Name="OpenButtonLabel"
+                            Grid.Column="2"
+                            FontAttributes="Bold"
+                            FontSize="Micro"
+                            LineBreakMode="WordWrap"
+                            Text="OFFEN"
+                            TextColor="Gray"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Image
+                            x:Name="FinishedButtonImage"
+                            Grid.Column="3"
+                            HeightRequest="25"
+                            Opacity="0.6"
+                            Source="ic_check_box.png"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="FinishedButtonImage_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label
+                            x:Name="ClosedButtonLabel"
+                            Grid.Column="4"
+                            FontAttributes="Bold"
+                            FontSize="Micro"
+                            LineBreakMode="WordWrap"
+                            Text="ABGESCHLOSSEN"
+                            TextColor="Gray"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Image
+                            x:Name="NoQEButtonImage"
+                            Grid.Column="5"
+                            HeightRequest="25"
+                            Opacity="0.6"
+                            Source="ic_check_box.png"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NoQEButtonImage_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label
+                            x:Name="NoQEButtonLabel"
+                            Grid.Column="6"
+                            FontAttributes="Bold"
+                            FontSize="Micro"
+                            LineBreakMode="TailTruncation"
+                            Text="ohne QE"
+                            TextColor="Gray"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Image
+                            x:Name="QEButtonImage"
+                            Grid.Column="7"
+                            HeightRequest="25"
+                            Opacity="0.6"
+                            Source="ic_check_box.png"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="25">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="QEButtonImage_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label
+                            x:Name="QEButtonLabel"
+                            Grid.Column="8"
+                            FontAttributes="Bold"
+                            FontSize="Micro"
+                            LineBreakMode="TailTruncation"
+                            Text="mit QE"
+                            TextColor="Gray"
+                            VerticalOptions="CenterAndExpand"/>
+                    </Grid>
+                    <ListView
+                        x:Name="MyList"
+                        ItemTapped="MyList_ItemTapped"
+                        ItemTemplate="{StaticResource bewohnerStatusDataTemplateSelector}"
+                        RowHeight="60 "/>
+                </StackLayout>
+                <ContentView
+                    x:Name="actIndBackground"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="White"
+                    IsVisible="{Binding IsLoading}"
+                    Opacity="0.5"/>
+                <ActivityIndicator
+                    x:Name="actInd"
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    IsRunning="{Binding IsLoading}"
+                    IsVisible="{Binding IsLoading}"
+                    Color="Red"/>
+            </AbsoluteLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

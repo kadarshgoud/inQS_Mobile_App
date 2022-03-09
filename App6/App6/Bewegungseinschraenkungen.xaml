@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Bewegungseinschraenkungen"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    xmlns:manager="clr-namespace:App6.Management"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="BackButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_back_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            LineBreakMode="TailTruncation"
+                            Text="(1/1) Bewegungseinschränkungen"
+                            TextColor="White"/>
+                        <Label
+                            x:Name="BogenLabel"
+                            FontAttributes="Italic"
+                            FontSize="10"
+                            LineBreakMode="WordWrap"
+                            Text="Erhebungsbogen zur Qualitätserfassung"
+                            TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="SaveAllButton"
+                            Margin="0,0,15,0"
+                            HeightRequest="35"
+                            Source="ic_done_all.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SaveDataAndGoToMenuButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <AbsoluteLayout Grid.Row="1" IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}">
+                    <StackLayout
+                        Margin="5"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        VerticalOptions="FillAndExpand">
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t15field01"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="15.1 Liegt bei dem Bewohner aktuell eine Bewegungseinschränkung vor?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image01_1"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_rb2.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field01_1"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="ja"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image01_2"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_rb2.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field01_2"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="nein (bei nein weiter mit Frage 16) "
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t15field02"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="15.2  Welche Gelenke sind betroffen?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image02_1"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field02_1"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Hüftgelenk"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image02_2"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field02_2"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Kniegelenk"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image02_3"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_9"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field02_3"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Sprunggelenk (Spitzfuß)"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image02_4"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field02_4"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Schultergelenk"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image02_5"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field02_5"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Ellbogengelenk"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t15field03"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="15.3 Wo ist die Bewegungseinschränkung bzw. wo sind die Bewegungseinschränkungen entstanden?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image03_1"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_rb2.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field03_1"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="in der Pflegeeinrichtung"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image03_2"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_rb2.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_7"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field03_2"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="woanders"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t15Image03_3"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_rb2.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_8"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t15field03_3"
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="ist nicht bekannt"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                    <ContentView
+                        x:Name="actIndBackground"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="White"
+                        IsVisible="{Binding IsLoading}"
+                        Opacity="0.5"/>
+                    <ActivityIndicator
+                        x:Name="actInd"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsRunning="{Binding IsLoading}"
+                        IsVisible="{Binding IsLoading}"
+                        Color="Red"/>
+                </AbsoluteLayout>
+                <Grid Grid.Row="2">
+                    <Button
+                        x:Name="ResetButton"
+                        Margin="10"
+                        BackgroundColor="#d4000f"
+                        BorderRadius="30"
+                        Clicked="ResetAllDataFromCategoryButton_TappedAsync"
+                        FontFamily="MediumFontFamily"
+                        FontSize="12"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Image="ic_reset.png"
+                        Text="Daten zurücksetzen"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

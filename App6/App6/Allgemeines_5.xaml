@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Allgemeines_5"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    xmlns:manager="clr-namespace:App6.Management"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="BackButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_back_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            LineBreakMode="TailTruncation"
+                            Text="(5/5) Allgemeines"
+                            TextColor="White"/>
+                        <Label
+                            x:Name="BogenLabel"
+                            FontAttributes="Italic"
+                            FontSize="10"
+                            LineBreakMode="WordWrap"
+                            Text="Erhebungsbogen zur Qualitätserfassung"
+                            TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="SaveAllButton"
+                            Margin="0,0,15,0"
+                            HeightRequest="35"
+                            Source="ic_done_all.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SaveDataAndGoToMenuButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <AbsoluteLayout Grid.Row="1" IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}">
+                    <StackLayout
+                        Margin="5"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        VerticalOptions="FillAndExpand">
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t00field13"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Geben Sie an, welche ärztlichen Diagnosen für den Bewohner vorliegen:"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_01"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_01"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Diabetes Mellitus"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_02"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_02"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Osteoporose"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_03"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_03"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Bösartige Tumorerkrankung"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_04"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_04"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Demenz"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_05"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_05"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Multiple Sklerose"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_06"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_06"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Tetraplegie/Tetraparese"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_07"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_07"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Parkinson"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_08"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_7"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_08"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Chorea Huntington"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_09"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_8"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_09"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Apallisches Syndrom"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_10"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_9"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_10"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="COPD (Chronisch obstruktive Lungenerkrankung)"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_11"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_10"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_11"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Depression"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t00Image13_12"
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                HeightRequest="30"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                Opacity="{Binding Source={x:Static manager:AppManager.ImageOpacity}}"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_11"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t00field13_12"
+                                Grid.Column="1"
+                                Margin="0,0,10,0"
+                                FontSize="16"
+                                LineBreakMode="CharacterWrap"
+                                Text="Sonstige Diagnose"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Label
+                            x:Name="t00label13_13"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Beschreibung der sonstigen Diagnose(n):"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"/>
+                        <Entry
+                            x:Name="t00field13_13"
+                            Margin="10,0,10,0"
+                            BackgroundColor="#e9e9e9"
+                            FontAttributes="{Binding Font}"
+                            HeightRequest="100"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Placeholder="Beschreibung..."
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Entry
+                            x:Name="t00field13_14"
+                            Margin="10,0,10,0"
+                            BackgroundColor="#e9e9e9"
+                            FontAttributes="{Binding Font}"
+                            HeightRequest="100"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            Placeholder="Beschreibung..."
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                    <ContentView
+                        x:Name="actIndBackground"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="White"
+                        IsVisible="{Binding IsLoading}"
+                        Opacity="0.5"/>
+                    <ActivityIndicator
+                        x:Name="actInd"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsRunning="{Binding IsLoading}"
+                        IsVisible="{Binding IsLoading}"
+                        Color="Red"/>
+                </AbsoluteLayout>
+                <Grid Grid.Row="2">
+                    <Button
+                        x:Name="ResetButton"
+                        Margin="10"
+                        BackgroundColor="#d4000f"
+                        BorderRadius="30"
+                        Clicked="ResetAllDataFromCategoryButton_TappedAsync"
+                        FontFamily="MediumFontFamily"
+                        FontSize="12"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Image="ic_reset.png"
+                        Text="Daten zurücksetzen"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

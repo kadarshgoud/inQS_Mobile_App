@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Dekubitus_1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    xmlns:manager="clr-namespace:App6.Management"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="BackButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_back_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            LineBreakMode="TailTruncation"
+                            Text="(1/1) Dekubitus"
+                            TextColor="White"/>
+                        <Label
+                            x:Name="BogenLabel"
+                            FontAttributes="Italic"
+                            FontSize="10"
+                            LineBreakMode="WordWrap"
+                            Text="Erhebungsbogen zur Qualitätserfassung"
+                            TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="SaveAllButton"
+                            Margin="0,0,15,0"
+                            HeightRequest="35"
+                            Source="ic_done_all.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SaveDataAndGoToMenuButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <AbsoluteLayout Grid.Row="1" IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}">
+                    <StackLayout
+                        Margin="5"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        VerticalOptions="FillAndExpand">
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t07field00"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="7.0 Hat der Bewohner laut Pflegedokumentation ein erhöhtes Dekubitusrisiko?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t07Picker00"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T07Picker00_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t07field01"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="7.1 Hatte der Bewohner während der vergangenen 6 Monate einen Dekubitus?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t07Picker01"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T07Picker01_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t07field02"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="7.2 Maximales Dekubitusstadium in den letzten 6 Monaten:"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t07Picker02"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T07Picker02_SelectedIndexChanged_2"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t07Field03"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="7.3 Bitte Zeitraum angeben (nur Dekubitus Stadium 2, 3 oder 4 oder wenn unbekannt - ggf. bis heute, höchstes Stadium): "
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Grid Margin="10,0,10,0" HeightRequest="75">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                x:Name="Label_t07field03_01"
+                                Grid.Column="0"
+                                FontSize="16"
+                                Text="von:"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="FillAndExpand"/>
+                            <DatePicker
+                                x:Name="DatePicker_t07field03_01"
+                                Grid.Column="1"
+                                DateSelected="DatePicker_t07field03_01_DateSelected"
+                                Format="dd/MM/yyyy"
+                                IsVisible="False"
+                                Unfocused="DatePicker_t07field03_01_Unfocused"
+                                VerticalOptions="FillAndExpand"/>
+                            <Entry
+                                x:Name="Entry_t07field03_01"
+                                Grid.Column="1"
+                                Focused="Entry_t07field03_01_Focused"
+                                FontAttributes="{Binding Font}"
+                                HorizontalOptions="FillAndExpand"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="FillAndExpand"/>
+                            <Label
+                                x:Name="ResetLabel_t07field03_01"
+                                Grid.Column="2"
+                                Margin="10,0,10,0"
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="X"
+                                TextColor="Red"
+                                VerticalOptions="FillAndExpand">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ResetLabel_t07field03_01_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <Grid Margin="10,0,10,0" HeightRequest="75">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                x:Name="Label_t07field03_02"
+                                Grid.Column="0"
+                                FontSize="16"
+                                Text="bis:"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="FillAndExpand"/>
+                            <DatePicker
+                                x:Name="DatePicker_t07field03_02"
+                                Grid.Column="1"
+                                DateSelected="DatePicker_t07field03_02_DateSelected"
+                                IsVisible="False"
+                                Unfocused="DatePicker_t07field03_02_Unfocused"
+                                VerticalOptions="FillAndExpand"/>
+                            <Entry
+                                x:Name="Entry_t07field03_02"
+                                Grid.Column="1"
+                                Focused="Entry_t07field03_02_Focused"
+                                FontAttributes="{Binding Font}"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="FillAndExpand"/>
+                            <Label
+                                x:Name="ResetLabel_t07field03_02"
+                                Grid.Column="2"
+                                Margin="10,0,10,0"
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="X"
+                                TextColor="Red"
+                                VerticalOptions="FillAndExpand">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ResetLabel_t07field03_02_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <Grid Margin="10,0,10,0" HeightRequest="75">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                x:Name="Label_t07field03_03"
+                                Grid.Column="0"
+                                FontSize="16"
+                                Text="von:"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="End"/>
+                            <DatePicker
+                                x:Name="DatePicker_t07field03_03"
+                                Grid.Column="1"
+                                DateSelected="DatePicker_t07field03_03_DateSelected"
+                                IsVisible="False"
+                                Unfocused="DatePicker_t07field03_03_Unfocused"
+                                VerticalOptions="End"/>
+                            <Entry
+                                x:Name="Entry_t07field03_03"
+                                Grid.Column="1"
+                                Focused="Entry_t07field03_03_Focused"
+                                FontAttributes="{Binding Font}"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="End"/>
+                            <Label
+                                x:Name="ResetLabel_t07field03_03"
+                                Grid.Column="2"
+                                Margin="10,0,10,0"
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="X"
+                                TextColor="Red"
+                                VerticalOptions="End">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ResetLabel_t07field03_03_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <Grid Margin="10,0,10,0" HeightRequest="75">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                x:Name="Label_t07field03_04"
+                                Grid.Column="0"
+                                FontSize="16"
+                                Text="bis:"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="End"/>
+                            <DatePicker
+                                x:Name="DatePicker_t07field03_04"
+                                Grid.Column="1"
+                                DateSelected="DatePicker_t07field03_04_DateSelected"
+                                IsVisible="False"
+                                Unfocused="DatePicker_t07field03_04_Unfocused"
+                                VerticalOptions="End"/>
+                            <Entry
+                                x:Name="Entry_t07field03_04"
+                                Grid.Column="1"
+                                Focused="Entry_t07field03_04_Focused"
+                                FontAttributes="{Binding Font}"
+                                IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                                TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                                VerticalOptions="End"/>
+                            <Label
+                                x:Name="ResetLabel_t07field03_04"
+                                Grid.Column="2"
+                                Margin="10,0,10,0"
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="X"
+                                TextColor="Red"
+                                VerticalOptions="End">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ResetLabel_t07field03_04_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t07field04_1"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="7.4 Wo ist der Dekubitus entstanden?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t07Picker04_1"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T07Picker04_1_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t07field04_2"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="7.4 Wo ist der zweite Dekubitus entstanden? "
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <Picker
+                            x:Name="t07Picker04_2"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T07Picker04_2_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="CenterAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                    <ContentView
+                        x:Name="actIndBackground"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="White"
+                        IsVisible="{Binding IsLoading}"
+                        Opacity="0.5"/>
+                    <ActivityIndicator
+                        x:Name="actInd"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsRunning="{Binding IsLoading}"
+                        IsVisible="{Binding IsLoading}"
+                        Color="Red"/>
+                </AbsoluteLayout>
+                <Grid Grid.Row="2">
+                    <Button
+                        x:Name="ResetButton"
+                        Margin="10"
+                        BackgroundColor="#d4000f"
+                        BorderRadius="30"
+                        Clicked="ResetAllDataFromCategoryButton_TappedAsync"
+                        FontFamily="MediumFontFamily"
+                        FontSize="12"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Image="ic_reset.png"
+                        Text="Daten zurücksetzen"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

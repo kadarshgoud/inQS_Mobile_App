@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App6.ContactForm">
+    <StackLayout BackgroundColor="#e9e9e9">
+        <ScrollView>
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+
+
+            <Label Text="Konkaktformular" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="0" HeightRequest="50" FontSize="24" FontAttributes="Bold"
+                   TextColor="#2d2d2d" Margin="0,5,0,0"/>
+
+            <Label Text="Benutzername" Grid.Row="1"
+                       HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="#2d2d2d" HeightRequest="30"
+                   Margin="15,0,0,0"/>
+
+            <Entry Placeholder="Benutzername" BackgroundColor="White"
+                       Grid.Row="2" Margin="15,10,15,0" PlaceholderColor="Gray"/>
+
+            <Label Text="Benutzerrolle" Grid.Row="3"
+                       HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="#2d2d2d" HeightRequest="30"
+                   Margin="15,10,0,0"/>
+
+            <Entry Placeholder="Benutzerrolle" BackgroundColor="White"
+                       Grid.Row="4" Margin="15,10,10,0" PlaceholderColor="Gray"/>
+
+
+            <Label Text="Betreff" Grid.Row="5"
+                       HorizontalOptions="StartAndExpand" FontSize="Medium"  HeightRequest="30"
+                   Margin="15,10,0,0"  TextColor="#2d2d2d"/>
+
+            <Entry Placeholder="Ihr Betreff" BackgroundColor="White"
+                       Grid.Row="6" Margin="15,10,10,0" PlaceholderColor="Gray"/>
+
+            <Label Text="" Grid.Row="7"
+                       HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="White" HeightRequest="30"
+                   Margin="15,10,0,0"/>
+
+            <Entry Placeholder="Ihre Nachricht..." BackgroundColor="White"
+                       Grid.Row="8" Margin="15,10,10,0" PlaceholderColor="Gray" HeightRequest="200"
+                  />
+            <Button Text="Absenden" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                    Grid.Row="9"/>
+
+        </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

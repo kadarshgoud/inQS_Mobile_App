@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="tr" original="APP6/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6914.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="APP6/RESOURCES/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="InformationButton" translate="yes" xml:space="preserve">
+          <source>Project Information</source>
+          <target state="final">Proje bilgisi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Projektinformationen</note>
+        </trans-unit>
+        <trans-unit id="LoginButton" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="final">Oturum aç</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Anmelden</note>
+        </trans-unit>
+        <trans-unit id="LoginPageHeadline" translate="yes" xml:space="preserve">
+          <source>LOGIN</source>
+          <target state="final">OTURUM AÇ</target>
+        </trans-unit>
+        <trans-unit id="RegisterButton" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="final">Kayıt ol</target>
+        </trans-unit>
+        <trans-unit id="Password" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="final">Parola</target>
+        </trans-unit>
+        <trans-unit id="Username" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <target state="final">Kullanıcı adı</target>
+        </trans-unit>
+        <trans-unit id="SignInButton" translate="yes" xml:space="preserve">
+          <source>Sign In</source>
+          <target state="final">Oturum aç</target>
+        </trans-unit>
+        <trans-unit id="LoginFailed" translate="yes" xml:space="preserve">
+          <source>Login credentials are incorrect!</source>
+          <target state="final">Giriş kimlik bilgileri yanlış!</target>
+        </trans-unit>
+        <trans-unit id="LoginSuccess" translate="yes" xml:space="preserve">
+          <source>You have been successfully registered.</source>
+          <target state="final">Başarıyla kaydedildi.</target>
+        </trans-unit>
+        <trans-unit id="RoleFour" translate="yes" xml:space="preserve">
+          <source>User Role 4</source>
+          <target state="final">Kullanıcı Rolü 4</target>
+        </trans-unit>
+        <trans-unit id="RoleOne" translate="yes" xml:space="preserve">
+          <source>User Role 1</source>
+          <target state="final">Kullanıcı Rolü 1</target>
+        </trans-unit>
+        <trans-unit id="RoleThree" translate="yes" xml:space="preserve">
+          <source>User Role 3</source>
+          <target state="final">Kullanıcı Rolü 3</target>
+        </trans-unit>
+        <trans-unit id="RoleTwo" translate="yes" xml:space="preserve">
+          <source>User Role 2</source>
+          <target state="final">Kullanıcı Rolü 2</target>
+        </trans-unit>
+        <trans-unit id="RegisterName" translate="yes" xml:space="preserve">
+          <source>Enter username</source>
+          <target state="final">Kullanıcı adı girin</target>
+        </trans-unit>
+        <trans-unit id="RegisterPageHeadline" translate="yes" xml:space="preserve">
+          <source>REGISTRATION</source>
+          <target state="final">KAYIT</target>
+        </trans-unit>
+        <trans-unit id="RegisterPassword" translate="yes" xml:space="preserve">
+          <source>Enter your password</source>
+          <target state="final">Şifrenizi girin</target>
+        </trans-unit>
+        <trans-unit id="RegisterPasswordConfirm" translate="yes" xml:space="preserve">
+          <source>Repeat password</source>
+          <target state="final">Şifreyi tekrar girin</target>
+        </trans-unit>
+        <trans-unit id="Language" translate="yes" xml:space="preserve">
+          <source>LANGUAGE</source>
+          <target state="final">DİL</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SPRACHE</note>
+        </trans-unit>
+        <trans-unit id="Cancel" translate="yes" xml:space="preserve">
+          <source>CANCEL</source>
+          <target state="final">İPTAL ETMEK</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ABBRECHEN</note>
+        </trans-unit>
+        <trans-unit id="LoginNotAvailable" translate="yes" xml:space="preserve">
+          <source>Login is currently not possible. Please try again later.</source>
+          <target state="final">Giriş şu anda mümkün değil. Lütfen daha sonra tekrar deneyiniz.</target>
+        </trans-unit>
+        <trans-unit id="LoginNotYetAvailable" translate="yes" xml:space="preserve">
+          <source>Login is not available until 1 October 2019. Please try again later.</source>
+          <target state="final">Giriş 1 Ekim 2019 tarihine kadar geçerli değildir. Lütfen daha sonra tekrar deneyin.</target>
+        </trans-unit>
+        <trans-unit id="RegisterFailed" translate="yes" xml:space="preserve">
+          <source>Registration failed</source>
+          <target state="final">Kayıt başarısız</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Registrierung fehlgeschlagen</note>
+        </trans-unit>
+        <trans-unit id="RegisterSelectRole" translate="yes" xml:space="preserve">
+          <source>Please select a user role.</source>
+          <target state="final">Lütfen bir kullanıcı rolü seçin.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Bitte wählen Sie eine Benutzerrolle aus.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccess" translate="yes" xml:space="preserve">
+          <source>Registration successful</source>
+          <target state="final">Kayıt başarılı</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Registrierung erfolgreich</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleFour" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 4. Please log in now.</source>
+          <target state="final">Kullanıcı rolü 4'te başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 4 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleOne" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 1. Please log in now.</source>
+          <target state="final">Kullanıcı rolü 1'e başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 1 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleThree" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 3. Please log in now.</source>
+          <target state="final">Kullanıcı rolü 3'te başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 3 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegisterSuccessTextRoleTwo" translate="yes" xml:space="preserve">
+          <source>You have successfully registered in user role 2. Please log in now.</source>
+          <target state="final">Kullanıcı rolü 2'ye başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sie haben sich erfolgreich in der Benutzerrolle 2 registriert. Bitte loggen Sie sich jetzt ein.</note>
+        </trans-unit>
+        <trans-unit id="RegistrationNotYetAvailable" translate="yes" xml:space="preserve">
+          <source>Registration is not available until 16 September 2019. Please try again later.</source>
+          <target state="final">Kayıt işlemi 16 Eylül 2019 tarihine kadar mümkün değildir. Lütfen daha sonra tekrar deneyin.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Die Registrierung ist erst ab dem 16. September 2019 möglich. Bitte versuchen Sie es später noch einmal.</note>
+        </trans-unit>
+        <trans-unit id="Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="final">Hata</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Fehler</note>
+        </trans-unit>
+        <trans-unit id="PasswordLowComplexity" translate="yes" xml:space="preserve">
+          <source>Your password should contain at least one number (0-9) and one sign (like @, §, $, %, #).</source>
+          <target state="final">Şifreniz en az bir rakam (0-9) ve bir işaret içermelidir (@, §, $,%, # gibi).</target>
+        </trans-unit>
+        <trans-unit id="PasswordNoMatch" translate="yes" xml:space="preserve">
+          <source>The password and confirmation password do not match.</source>
+          <target state="final">Şifre ve onay şifresi uyuşmuyor.</target>
+        </trans-unit>
+        <trans-unit id="PasswordShort" translate="yes" xml:space="preserve">
+          <source>Your password is too short. Minimum length is 6 character.</source>
+          <target state="final">Parolanız çok kısa. Minimum uzunluk 6 karakterdir.</target>
+        </trans-unit>
+        <trans-unit id="UsernameTaken" translate="yes" xml:space="preserve">
+          <source>Username is already taken. Please change username.</source>
+          <target state="final">Kullanıcı adı zaten alınmış. Lütfen kullanıcı adını değiştir.</target>
+        </trans-unit>
+        <trans-unit id="RegisterEmptyFields" translate="yes" xml:space="preserve">
+          <source>Please fill out all required fields in the registration form.</source>
+          <target state="final">Lütfen gerekli tüm alanları kayıt formunda doldurunuz.</target>
+        </trans-unit>
+        <trans-unit id="RegisterUnknownInQSUser" translate="yes" xml:space="preserve">
+          <source>Username is not registered in the InQS Web System. Please use valid username.</source>
+          <target state="final">Kullanıcı adı InQS Web Sisteminde kayıtlı değil. Lütfen geçerli bir kullanıcı adı kullanın.</target>
+        </trans-unit>
+        <trans-unit id="RegisterWrongRole" translate="yes" xml:space="preserve">
+          <source>Your selected role is not corresponding to the role in the InQS Web System.</source>
+          <target state="final">Seçtiğiniz rol, InQS Web Sistemindeki rolle uyuşmuyor.</target>
+        </trans-unit>
+        <trans-unit id="RegisterContactDBFailure" translate="yes" xml:space="preserve">
+          <source>Please contact admin.</source>
+          <target state="final">Lütfen yönetici ile iletişime geçin.</target>
+        </trans-unit>
+        <trans-unit id="LoginWrongAppVersion" translate="yes" xml:space="preserve">
+          <source>You are using an outdated app version, please update your app via the Google Play Store.</source>
+          <target state="final">Eski bir uygulama sürümünü kullanıyorsanız, lütfen uygulamanızı Google Play Store üzerinden güncelleyin.</target>
+        </trans-unit>
+        <trans-unit id="DatenschutzButton" translate="yes" xml:space="preserve">
+          <source>Privacy statement</source>
+          <target state="final">Gizlilik beyanı</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Datenschutzerklärung</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelBenutzername" translate="yes" xml:space="preserve">
+          <source>Username:</source>
+          <target state="final">Kullanıcı adı:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Benutzername:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelBenutzerrolle" translate="yes" xml:space="preserve">
+          <source>User role:</source>
+          <target state="final">Kullanıcı rolü:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Benutzerrolle:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelEinrichtung" translate="yes" xml:space="preserve">
+          <source>Institution:</source>
+          <target state="final">Kurum:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Einrichtung:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabelWohnbereich" translate="yes" xml:space="preserve">
+          <source>Institution area:</source>
+          <target state="final">Kurum alanı:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Wohnbereich:</note>
+        </trans-unit>
+        <trans-unit id="PreferenceLabel" translate="yes" xml:space="preserve">
+          <source>Preferences</source>
+          <target state="final">Tercihler</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Einstellungen</note>
+        </trans-unit>
+        <trans-unit id="Information" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <target state="final">Bilgi</target>
+        </trans-unit>
+        <trans-unit id="InformationSaveQuery" translate="yes" xml:space="preserve">
+          <source>Would you like to save the data?</source>
+          <target state="final">Verileri kaydetmek ister misiniz?</target>
+        </trans-unit>
+        <trans-unit id="No" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="final">Hayır</target>
+        </trans-unit>
+        <trans-unit id="Yes" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="final">Evet</target>
+        </trans-unit>
+        <trans-unit id="FieldsUnfilled" translate="yes" xml:space="preserve">
+          <source>Please answer the red marked question item(s).</source>
+          <target state="final">Lütfen kırmızı işaretli soru maddelerine cevap verin).</target>
+        </trans-unit>
+        <trans-unit id="Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="final">Uyarı</target>
+        </trans-unit>
+        <trans-unit id="ResetCategoryWarning" translate="yes" xml:space="preserve">
+          <source>Would you like to reset the category data?</source>
+          <target state="final">Kategori verilerini sıfırlamak ister misiniz?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Wollen Sie die Daten der Kategorie wirklich zürucksetzen?</note>
+        </trans-unit>
+        <trans-unit id="CreateSurvey" translate="yes" xml:space="preserve">
+          <source>Create Surveys</source>
+          <target state="final">Anket Oluştur</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbögen anlegen</note>
+        </trans-unit>
+        <trans-unit id="ShowSurvey" translate="yes" xml:space="preserve">
+          <source>Show Surveys</source>
+          <target state="final">Anketleri Göster</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbögen anzeigen</note>
+        </trans-unit>
+        <trans-unit id="SurveyHeadline" translate="yes" xml:space="preserve">
+          <source>Data entry form for quality recording</source>
+          <target state="final">Kaliteli kayıt için veri giriş formu</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbogen zur Qualitätserfassung</note>
+        </trans-unit>
+        <trans-unit id="SurveyHeadlineFor" translate="yes" xml:space="preserve">
+          <source>for</source>
+          <target state="final">için</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">für</note>
+        </trans-unit>
+        <trans-unit id="ResetCategoryImpossibleWarning" translate="yes" xml:space="preserve">
+          <source>The category cannot be reset because the evaluation period is already over.</source>
+          <target state="final">Değerlendirme periyodu zaten bittiği için kategori sıfırlanamıyor.</target>
+        </trans-unit>
+        <trans-unit id="AppError" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="final">Hata</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Fehler</note>
+        </trans-unit>
+        <trans-unit id="AppErrorMsg" translate="yes" xml:space="preserve">
+          <source>An error has occurred. Please check your internet connection or correct your input and try again.</source>
+          <target state="final">Bir hata oluştu. Lütfen internet bağlantınızı kontrol edin veya girişinizi düzeltin ve tekrar deneyin.</target>
+        </trans-unit>
+        <trans-unit id="SurveyHeadlineWithoutQE" translate="yes" xml:space="preserve">
+          <source>Data entry form without quality recording</source>
+          <target state="final">Kaliteli kayıt olmadan veri giriş formu</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Erhebungsbogen ohne Qualitätserfassung</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

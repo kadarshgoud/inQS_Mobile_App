@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Heimeinzug_2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    xmlns:manager="clr-namespace:App6.Management"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="BackButton"
+                            HeightRequest="40"
+                            Source="ic_arrow_back_ios.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BackButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            LineBreakMode="TailTruncation"
+                            Text="(2/2) Heimeinzug"
+                            TextColor="White"/>
+                        <Label
+                            x:Name="BogenLabel"
+                            FontAttributes="Italic"
+                            FontSize="10"
+                            LineBreakMode="WordWrap"
+                            Text="Erhebungsbogen zur Qualitätserfassung"
+                            TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Image
+                            x:Name="SaveAllButton"
+                            Margin="0,0,15,0"
+                            HeightRequest="35"
+                            Source="ic_done_all.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SaveDataAndGoToMenuButton_TappedAsync"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <AbsoluteLayout Grid.Row="1" IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}">
+                    <StackLayout
+                        Margin="5"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        VerticalOptions="FillAndExpand">
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t12field04_5"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Wer hat an dem lntegrationsgespräch teilgenommen?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t12Image02_03_01"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_02_03_01"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t12field02_03_01"
+                                Grid.Column="1"
+                                FontSize="16"
+                                Text="Bewohner"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t12Image02_03_02"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_02_03_02"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t12field02_03_02"
+                                Grid.Column="1"
+                                FontSize="16"
+                                Text="Angehörige"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t12Image02_03_03"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_02_03_03"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t12field02_03_03"
+                                Grid.Column="1"
+                                FontSize="16"
+                                Text="Betreuer"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="t12Image02_03_04"
+                                Grid.Column="0"
+                                HeightRequest="30"
+                                Source="ic_check_box_outline_blank.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_02_03_04"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                x:Name="t12field02_03_04"
+                                Grid.Column="1"
+                                FontSize="16"
+                                Text="andere Vertrauenspersonen, die nicht in der Einrichtung beschäftigt sind"
+                                TextColor="{Binding Source={x:Static manager:AppManager.AnswerColor}}"
+                                VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t12field04_5_01"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Vertrauensperson:"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t12Picker04_5_01"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T12Picker04_5_01_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                        <Label
+                            x:Name="t12field06_1"
+                            Margin="10,0,10,0"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="12.3 Wurden die Ergebnisse dieses Gespräches dokumentiert?"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <Picker
+                            x:Name="t12Picker06_1"
+                            Margin="10,0,10,0"
+                            FontAttributes="{Binding Font}"
+                            IsEnabled="{Binding Source={x:Static local:Erfassungsbogen.Is_enabled}}"
+                            SelectedIndexChanged="T12Picker06_1_SelectedIndexChanged"
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="FillAndExpand"/>
+                        <Label
+                            x:Name="Textline"
+                            Margin="10,0,10,0"
+                            FontAttributes="Italic"
+                            FontSize="16"
+                            LineBreakMode="CharacterWrap"
+                            Text="Wichtig! Kreuzen Sie bitte nur ja an, wenn nach dem Gespräch Ergebnisse, z.B. Wünsche des Bewohners oder Absprachen über das Beibehalten oder die Veränderung der Versorgung, schriftlich festgehalten wurden."
+                            TextColor="{Binding Source={x:Static manager:AppManager.QuestionColor}}"
+                            VerticalOptions="Fill"/>
+                        <!--  Box  -->
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                    <ContentView
+                        x:Name="actIndBackground"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="White"
+                        IsVisible="{Binding IsLoading}"
+                        Opacity="0.5"/>
+                    <ActivityIndicator
+                        x:Name="actInd"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsRunning="{Binding IsLoading}"
+                        IsVisible="{Binding IsLoading}"
+                        Color="Red"/>
+                </AbsoluteLayout>
+                <Grid Grid.Row="2">
+                    <Button
+                        x:Name="ResetButton"
+                        Margin="10"
+                        BackgroundColor="#d4000f"
+                        BorderRadius="30"
+                        Clicked="ResetAllDataFromCategoryButton_TappedAsync"
+                        FontFamily="MediumFontFamily"
+                        FontSize="12"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Image="ic_reset.png"
+                        Text="Daten zurücksetzen"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

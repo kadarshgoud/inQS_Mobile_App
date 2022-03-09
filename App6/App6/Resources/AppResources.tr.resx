@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InformationButton" xml:space="preserve">
+    <value>Proje bilgisi</value>
+    <comment>Projektinformationen</comment>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>Oturum aç</value>
+    <comment>Anmelden</comment>
+  </data>
+  <data name="LoginPageHeadline" xml:space="preserve">
+    <value>OTURUM AÇ</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Kayıt ol</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Kullanıcı adı</value>
+  </data>
+  <data name="SignInButton" xml:space="preserve">
+    <value>Oturum aç</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Giriş kimlik bilgileri yanlış!</value>
+  </data>
+  <data name="LoginSuccess" xml:space="preserve">
+    <value>Başarıyla kaydedildi.</value>
+  </data>
+  <data name="RoleFour" xml:space="preserve">
+    <value>Kullanıcı Rolü 4</value>
+  </data>
+  <data name="RoleOne" xml:space="preserve">
+    <value>Kullanıcı Rolü 1</value>
+  </data>
+  <data name="RoleThree" xml:space="preserve">
+    <value>Kullanıcı Rolü 3</value>
+  </data>
+  <data name="RoleTwo" xml:space="preserve">
+    <value>Kullanıcı Rolü 2</value>
+  </data>
+  <data name="RegisterName" xml:space="preserve">
+    <value>Kullanıcı adı girin</value>
+  </data>
+  <data name="RegisterPageHeadline" xml:space="preserve">
+    <value>KAYIT</value>
+  </data>
+  <data name="RegisterPassword" xml:space="preserve">
+    <value>Şifrenizi girin</value>
+  </data>
+  <data name="RegisterPasswordConfirm" xml:space="preserve">
+    <value>Şifreyi tekrar girin</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>DİL</value>
+    <comment>SPRACHE</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İPTAL ETMEK</value>
+    <comment>ABBRECHEN</comment>
+  </data>
+  <data name="LoginNotAvailable" xml:space="preserve">
+    <value>Giriş şu anda mümkün değil. Lütfen daha sonra tekrar deneyiniz.</value>
+  </data>
+  <data name="LoginNotYetAvailable" xml:space="preserve">
+    <value>Giriş 1 Ekim 2019 tarihine kadar geçerli değildir. Lütfen daha sonra tekrar deneyin.</value>
+  </data>
+  <data name="RegisterFailed" xml:space="preserve">
+    <value>Kayıt başarısız</value>
+    <comment>Registrierung fehlgeschlagen</comment>
+  </data>
+  <data name="RegisterSelectRole" xml:space="preserve">
+    <value>Lütfen bir kullanıcı rolü seçin.</value>
+    <comment>Bitte wählen Sie eine Benutzerrolle aus.</comment>
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>Kayıt başarılı</value>
+    <comment>Registrierung erfolgreich</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleFour" xml:space="preserve">
+    <value>Kullanıcı rolü 4'te başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 4 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleOne" xml:space="preserve">
+    <value>Kullanıcı rolü 1'e başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 1 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleThree" xml:space="preserve">
+    <value>Kullanıcı rolü 3'te başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 3 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleTwo" xml:space="preserve">
+    <value>Kullanıcı rolü 2'ye başarıyla kayıt oldunuz. Lütfen şimdi giriş yapın.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 2 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegistrationNotYetAvailable" xml:space="preserve">
+    <value>Kayıt işlemi 16 Eylül 2019 tarihine kadar mümkün değildir. Lütfen daha sonra tekrar deneyin.</value>
+    <comment>Die Registrierung ist erst ab dem 16. September 2019 möglich. Bitte versuchen Sie es später noch einmal.</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hata</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="PasswordLowComplexity" xml:space="preserve">
+    <value>Şifreniz en az bir rakam (0-9) ve bir işaret içermelidir (@, §, $,%, # gibi).</value>
+  </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>Şifre ve onay şifresi uyuşmuyor.</value>
+  </data>
+  <data name="PasswordShort" xml:space="preserve">
+    <value>Parolanız çok kısa. Minimum uzunluk 6 karakterdir.</value>
+  </data>
+  <data name="UsernameTaken" xml:space="preserve">
+    <value>Kullanıcı adı zaten alınmış. Lütfen kullanıcı adını değiştir.</value>
+  </data>
+  <data name="RegisterEmptyFields" xml:space="preserve">
+    <value>Lütfen gerekli tüm alanları kayıt formunda doldurunuz.</value>
+  </data>
+  <data name="RegisterUnknownInQSUser" xml:space="preserve">
+    <value>Kullanıcı adı InQS Web Sisteminde kayıtlı değil. Lütfen geçerli bir kullanıcı adı kullanın.</value>
+  </data>
+  <data name="RegisterWrongRole" xml:space="preserve">
+    <value>Seçtiğiniz rol, InQS Web Sistemindeki rolle uyuşmuyor.</value>
+  </data>
+  <data name="RegisterContactDBFailure" xml:space="preserve">
+    <value>Lütfen yönetici ile iletişime geçin.</value>
+  </data>
+  <data name="LoginWrongAppVersion" xml:space="preserve">
+    <value>Eski bir uygulama sürümünü kullanıyorsanız, lütfen uygulamanızı Google Play Store üzerinden güncelleyin.</value>
+  </data>
+  <data name="DatenschutzButton" xml:space="preserve">
+    <value>Gizlilik beyanı</value>
+    <comment>Datenschutzerklärung</comment>
+  </data>
+  <data name="PreferenceLabelBenutzername" xml:space="preserve">
+    <value>Kullanıcı adı:</value>
+    <comment>Benutzername:</comment>
+  </data>
+  <data name="PreferenceLabelBenutzerrolle" xml:space="preserve">
+    <value>Kullanıcı rolü:</value>
+    <comment>Benutzerrolle:</comment>
+  </data>
+  <data name="PreferenceLabelEinrichtung" xml:space="preserve">
+    <value>Kurum:</value>
+    <comment>Einrichtung:</comment>
+  </data>
+  <data name="PreferenceLabelWohnbereich" xml:space="preserve">
+    <value>Kurum alanı:</value>
+    <comment>Wohnbereich:</comment>
+  </data>
+  <data name="PreferenceLabel" xml:space="preserve">
+    <value>Tercihler</value>
+    <comment>Einstellungen</comment>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Bilgi</value>
+  </data>
+  <data name="InformationSaveQuery" xml:space="preserve">
+    <value>Verileri kaydetmek ister misiniz?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Hayır</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="FieldsUnfilled" xml:space="preserve">
+    <value>Lütfen kırmızı işaretli soru maddelerine cevap verin).</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Uyarı</value>
+  </data>
+  <data name="ResetCategoryWarning" xml:space="preserve">
+    <value>Kategori verilerini sıfırlamak ister misiniz?</value>
+    <comment>Wollen Sie die Daten der Kategorie wirklich zürucksetzen?</comment>
+  </data>
+  <data name="CreateSurvey" xml:space="preserve">
+    <value>Anket Oluştur</value>
+    <comment>Erhebungsbögen anlegen</comment>
+  </data>
+  <data name="ShowSurvey" xml:space="preserve">
+    <value>Anketleri Göster</value>
+    <comment>Erhebungsbögen anzeigen</comment>
+  </data>
+  <data name="SurveyHeadline" xml:space="preserve">
+    <value>Kaliteli kayıt için veri giriş formu</value>
+    <comment>Erhebungsbogen zur Qualitätserfassung</comment>
+  </data>
+  <data name="SurveyHeadlineFor" xml:space="preserve">
+    <value>için</value>
+    <comment>für</comment>
+  </data>
+  <data name="ResetCategoryImpossibleWarning" xml:space="preserve">
+    <value>Değerlendirme periyodu zaten bittiği için kategori sıfırlanamıyor.</value>
+  </data>
+  <data name="AppError" xml:space="preserve">
+    <value>Hata</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="AppErrorMsg" xml:space="preserve">
+    <value>Bir hata oluştu. Lütfen internet bağlantınızı kontrol edin veya girişinizi düzeltin ve tekrar deneyin.</value>
+  </data>
+  <data name="SurveyHeadlineWithoutQE" xml:space="preserve">
+    <value>Kaliteli kayıt olmadan veri giriş formu</value>
+    <comment>Erhebungsbogen ohne Qualitätserfassung</comment>
+  </data>
+</root>

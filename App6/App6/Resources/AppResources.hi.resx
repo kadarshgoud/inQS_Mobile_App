@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InformationButton" xml:space="preserve">
+    <value>परियोजना की जानकारी</value>
+    <comment>Projektinformationen</comment>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>लॉग इन करें</value>
+    <comment>Anmelden</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>पारण शब्द</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>रजिस्टर करें</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>उपयोगकर्ता नाम</value>
+  </data>
+  <data name="LoginPageHeadline" xml:space="preserve">
+    <value>लॉग इन करें</value>
+  </data>
+  <data name="SignInButton" xml:space="preserve">
+    <value>साइन इन करें</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>भाषा</value>
+    <comment>SPRACHE</comment>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>लॉगिन क्रेडेंशियल गलत हैं!</value>
+  </data>
+  <data name="LoginSuccess" xml:space="preserve">
+    <value>आप सफलतापूर्वक पंजीकृत कर लिए गए हैं।</value>
+  </data>
+  <data name="RegisterName" xml:space="preserve">
+    <value>उपयोगकर्ता नाम दर्ज करें</value>
+  </data>
+  <data name="RegisterPageHeadline" xml:space="preserve">
+    <value>रजिस्टर करें</value>
+  </data>
+  <data name="RegisterPassword" xml:space="preserve">
+    <value>अपना पासवर्ड डालें</value>
+  </data>
+  <data name="RegisterPasswordConfirm" xml:space="preserve">
+    <value>पासवर्ड दोहराएं</value>
+  </data>
+  <data name="RoleFour" xml:space="preserve">
+    <value>उपयोगकर्ता भूमिका 4</value>
+  </data>
+  <data name="RoleOne" xml:space="preserve">
+    <value>उपयोगकर्ता भूमिका 1</value>
+  </data>
+  <data name="RoleThree" xml:space="preserve">
+    <value>उपयोगकर्ता भूमिका 3</value>
+  </data>
+  <data name="RoleTwo" xml:space="preserve">
+    <value>उपयोगकर्ता भूमिका 2</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>रद्द करना</value>
+    <comment>ABBRECHEN</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>ग़लती</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="LoginNotAvailable" xml:space="preserve">
+    <value>वर्तमान में लॉगिन संभव नहीं है। बाद में पुन: प्रयास करें।</value>
+  </data>
+  <data name="LoginNotYetAvailable" xml:space="preserve">
+    <value>1 अक्टूबर 2019 तक लॉगिन उपलब्ध नहीं है। कृपया बाद में पुनः प्रयास करें।</value>
+  </data>
+  <data name="PasswordLowComplexity" xml:space="preserve">
+    <value>आपके पासवर्ड में कम से कम एक नंबर (0-9) और एक चिन्ह (जैसे @, §, $,%, #) होना चाहिए।</value>
+  </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>पासवर्ड और पुष्टिकरण पासवर्ड मेल नहीं खाते हैं।</value>
+  </data>
+  <data name="PasswordShort" xml:space="preserve">
+    <value>आपका पासवर्ड बहुत छोटा है। न्यूनतम लंबाई 6 वर्ण है।</value>
+  </data>
+  <data name="RegisterContactDBFailure" xml:space="preserve">
+    <value>कृपया व्यवस्थापक से संपर्क करें।</value>
+  </data>
+  <data name="RegisterEmptyFields" xml:space="preserve">
+    <value>कृपया पंजीकरण फॉर्म में सभी आवश्यक फ़ील्ड भरें।</value>
+  </data>
+  <data name="RegisterFailed" xml:space="preserve">
+    <value>पंजीकरण विफल</value>
+    <comment>Registrierung fehlgeschlagen</comment>
+  </data>
+  <data name="RegisterSelectRole" xml:space="preserve">
+    <value>कृपया एक उपयोगकर्ता की भूमिका का चयन करें।</value>
+    <comment>Bitte wählen Sie eine Benutzerrolle aus.</comment>
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>पंजीकरण सफल</value>
+    <comment>Registrierung erfolgreich</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleFour" xml:space="preserve">
+    <value>आपने सफलतापूर्वक उपयोगकर्ता की भूमिका में पंजीकरण कर लिया है 4. अब लॉग इन करें।</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 4 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleOne" xml:space="preserve">
+    <value>आपने सफलतापूर्वक उपयोगकर्ता की भूमिका में पंजीकरण कर लिया है 1. अब लॉग इन करें।</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 1 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleThree" xml:space="preserve">
+    <value>आपने सफलतापूर्वक उपयोगकर्ता की भूमिका में पंजीकरण कर लिया है 3. अब लॉग इन करें।</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 3 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleTwo" xml:space="preserve">
+    <value>आपने सफलतापूर्वक उपयोगकर्ता की भूमिका में पंजीकरण कर लिया है 3. अब लॉग इन करें।</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 2 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterUnknownInQSUser" xml:space="preserve">
+    <value>उपयोगकर्ता नाम InQS वेब सिस्टम में पंजीकृत नहीं है। कृपया एक मान्य उपयोगकर्ता नाम का उपयोग करें।</value>
+  </data>
+  <data name="RegisterWrongRole" xml:space="preserve">
+    <value>आपकी चयनित भूमिका InQS वेब सिस्टम में भूमिका के अनुरूप नहीं है।</value>
+  </data>
+  <data name="RegistrationNotYetAvailable" xml:space="preserve">
+    <value>पंजीकरण 16 सितंबर 2019 तक उपलब्ध नहीं है। कृपया बाद में पुनः प्रयास करें।</value>
+    <comment>Die Registrierung ist erst ab dem 16. September 2019 möglich. Bitte versuchen Sie es später noch einmal.</comment>
+  </data>
+  <data name="UsernameTaken" xml:space="preserve">
+    <value>उपयोगकर्ता का नाम पहले से लिया है। कृपया उपयोगकर्ता नाम बदलें।</value>
+  </data>
+  <data name="DatenschutzButton" xml:space="preserve">
+    <value>गोपनीयता वाले कथन</value>
+    <comment>Datenschutzerklärung</comment>
+  </data>
+  <data name="LoginWrongAppVersion" xml:space="preserve">
+    <value>आप एक पुराने एप्लिकेशन संस्करण का उपयोग कर रहे हैं, कृपया Google Play Store के माध्यम से अपना ऐप अपडेट करें।</value>
+  </data>
+  <data name="PreferenceLabel" xml:space="preserve">
+    <value>तरजीह</value>
+    <comment>Einstellungen</comment>
+  </data>
+  <data name="PreferenceLabelBenutzername" xml:space="preserve">
+    <value>उपयोगकर्ता नाम:</value>
+    <comment>Benutzername:</comment>
+  </data>
+  <data name="PreferenceLabelBenutzerrolle" xml:space="preserve">
+    <value>उपयोगकर्ता भूमिका:</value>
+    <comment>Benutzerrolle:</comment>
+  </data>
+  <data name="PreferenceLabelEinrichtung" xml:space="preserve">
+    <value>संस्थान:</value>
+    <comment>Einrichtung:</comment>
+  </data>
+  <data name="PreferenceLabelWohnbereich" xml:space="preserve">
+    <value>संस्था क्षेत्र:</value>
+    <comment>Wohnbereich:</comment>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>जानकारी</value>
+  </data>
+  <data name="InformationSaveQuery" xml:space="preserve">
+    <value>क्या आप डेटा सहेजना चाहेंगे?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>नहीं</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>हाँ</value>
+  </data>
+  <data name="FieldsUnfilled" xml:space="preserve">
+    <value>कृपया लाल चिह्नित प्रश्न आइटम का उत्तर दें।</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>चेतावनी</value>
+  </data>
+  <data name="ResetCategoryWarning" xml:space="preserve">
+    <value>क्या आप श्रेणी डेटा रीसेट करना चाहेंगे?</value>
+    <comment>Wollen Sie die Daten der Kategorie wirklich zürucksetzen?</comment>
+  </data>
+  <data name="CreateSurvey" xml:space="preserve">
+    <value>सर्वे बनाएं</value>
+    <comment>Erhebungsbögen anlegen</comment>
+  </data>
+  <data name="ShowSurvey" xml:space="preserve">
+    <value>सर्वेक्षण दिखाएं</value>
+    <comment>Erhebungsbögen anzeigen</comment>
+  </data>
+  <data name="SurveyHeadline" xml:space="preserve">
+    <value>क्वालिटी रिकॉर्डिंग के लिए डेटा एंट्री फॉर्म</value>
+    <comment>Erhebungsbogen zur Qualitätserfassung</comment>
+  </data>
+  <data name="SurveyHeadlineFor" xml:space="preserve">
+    <value>के लिये</value>
+    <comment>für</comment>
+  </data>
+  <data name="ResetCategoryImpossibleWarning" xml:space="preserve">
+    <value>श्रेणी को रीसेट नहीं किया जा सकता क्योंकि मूल्यांकन की अवधि पहले ही समाप्त हो गई है।</value>
+  </data>
+  <data name="AppError" xml:space="preserve">
+    <value>गलती</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="AppErrorMsg" xml:space="preserve">
+    <value>एक गलती हुई है। कृपया अपना इंटरनेट कनेक्शन जांचें या अपना इनपुट सही करें और पुनः प्रयास करें।</value>
+  </data>
+  <data name="SurveyHeadlineWithoutQE" xml:space="preserve">
+    <value>क्वालिटी रिकॉर्डिंग के बिना डाटा एंट्री फॉर्म</value>
+    <comment>Erhebungsbogen ohne Qualitätserfassung</comment>
+  </data>
+</root>

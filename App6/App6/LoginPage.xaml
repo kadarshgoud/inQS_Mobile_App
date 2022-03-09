@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:App6.Helpers;assembly=App6">
+    <ContentPage.Content>
+        <Grid
+            x:Name="LoginGrid"
+            BackgroundColor="#e9e9e9"
+            RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                FontSize="Medium"
+                HorizontalOptions="CenterAndExpand"
+                Text="{i18n:Translate LoginPageHeadline}"
+                TextColor="#2d2d2d"
+                VerticalOptions="CenterAndExpand"/>
+            <Image
+                Grid.Row="1"
+                HorizontalOptions="CenterAndExpand"
+                Source="inqs_logo.png"
+                VerticalOptions="StartAndExpand"/>
+            <Entry
+                x:Name="user"
+                Grid.Row="2"
+                Margin="15,0,15,0"
+                BackgroundColor="White"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="{i18n:Translate Username}"
+                Text=""/>
+            <Entry
+                x:Name="pass"
+                Grid.Row="3"
+                Margin="15,0,15,0"
+                BackgroundColor="White"
+                HorizontalOptions="FillAndExpand"
+                IsPassword="True"
+                Placeholder="{i18n:Translate Password}"
+                Text=""/>
+            <Button
+                Grid.Row="4"
+                BackgroundColor="#d4000f"
+                BorderRadius="30"
+                Clicked="Button_Login_Clicked"
+                FontFamily="MediumFontFamily"
+                FontSize="14"
+                HeightRequest="50"
+                HorizontalOptions="CenterAndExpand"
+                Text="{i18n:Translate LoginButton}"
+                TextColor="White"
+                TranslationY="30"
+                VerticalOptions="Center"
+                WidthRequest="230"/>
+            <Button
+                Grid.Row="5"
+                BackgroundColor="#d4000f"
+                BorderRadius="30"
+                Clicked="Button_Register_Clicked"
+                FontFamily="MediumFontFamily"
+                FontSize="14"
+                HeightRequest="50"
+                HorizontalOptions="CenterAndExpand"
+                Text="{i18n:Translate RegisterButton}"
+                TextColor="White"
+                TranslationY="50"
+                VerticalOptions="Center"
+                WidthRequest="230"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

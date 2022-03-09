@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.Datenschutz"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App6.Model"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="0"
+                BackgroundColor="#d4000f"
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Column="0"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Image x:Name="BackButton" HeightRequest="40" Source="ic_arrow_back_ios.png"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MenuItem1_Activated"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        LineBreakMode="TailTruncation"
+                        Text="Datenschutzerklärung"
+                        TextColor="White"/>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="2"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+            </Grid>
+            <Grid
+                Grid.Row="1"
+                ColumnSpacing="40"
+                RowSpacing="5">
+                <WebView x:Name="webview"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

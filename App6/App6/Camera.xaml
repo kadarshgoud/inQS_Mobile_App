@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App6.Camera" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+
+
+        <Grid ColumnSpacing="0" RowSpacing="0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="44"/>
+
+
+            </Grid.RowDefinitions>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <StackLayout Grid.Row="0" BackgroundColor="#64ABC8">
+
+
+                <ScrollView>
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+
+                        <Grid.ColumnDefinitions>
+
+
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+
+
+                        </Grid.ColumnDefinitions>
+
+
+                        <Label Text="CAMERA" TextColor="Black" Grid.Row="0" HorizontalOptions="CenterAndExpand" Grid.ColumnSpan="2"
+                     VerticalOptions="EndAndExpand" HeightRequest="65" FontSize="Medium" TranslationY="20" />
+
+                        <Image Source="ic_camera1.png" WidthRequest="210" Grid.Column="0"  HeightRequest="65" BackgroundColor="Gray"
+                      Margin="20,10,5,10"    Grid.Row="1" HorizontalOptions="CenterAndExpand"/>
+
+                        <Image Source="ic_add_photo_alternate.png" WidthRequest="210" Grid.Column="1" HeightRequest="65" BackgroundColor="#03A9F4"
+                       HorizontalOptions="CenterAndExpand" Grid.Row="1" Margin="5,10,20,10" />
+
+                        <Frame Grid.Row="2" CornerRadius="5" Margin="20,10,20,30"  OutlineColor="Blue" HasShadow="True" Grid.ColumnSpan="2"
+                       HeightRequest="300" >
+
+
+                            <Grid RowSpacing="10"  Padding="0" ColumnSpacing="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+
+
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+
+
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="preview_73809.jpg" HeightRequest="200" Grid.Row="0" Grid.ColumnSpan="2"
+                              HorizontalOptions="CenterAndExpand"/>
+                                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Silver" Margin="0,0,0,10" Grid.ColumnSpan="2"/>
+
+
+                                <Button Text="Save" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="2" HeightRequest="50"
+                                Grid.Column="0"  BorderRadius="5" TranslationY="0" BackgroundColor="SkyBlue"/>
+
+                                <Button Text="Delete" HorizontalOptions="CenterAndExpand" Grid.Row="2" HeightRequest="50" VerticalOptions="CenterAndExpand"
+                                Grid.Column="1"  BorderRadius="5" TranslationY="0" BackgroundColor="Gray"/>
+                            </Grid>
+                        </Frame>
+
+
+
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+
+
+            <BoxView BackgroundColor="Black" HeightRequest="1" Grid.Row="1"/>
+            <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Spacing="0" Grid.Column="0" BackgroundColor="White">
+
+                    <Image x:Name="pho" HeightRequest="40" Source="ic_home1.png" VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+
+                </StackLayout>
+                <StackLayout Spacing="0" Grid.Column="1" BackgroundColor="White" >
+                    <Image x:Name="pho2" HeightRequest="40" Source="ic_view_list.png" VerticalOptions="CenterAndExpand"/>
+
+                    <StackLayout.GestureRecognizers>
+
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </StackLayout.GestureRecognizers>
+
+                </StackLayout>
+                <StackLayout Spacing="0" Grid.Column="2" BackgroundColor="White" >
+                    <Image x:Name ="pho3" HeightRequest="40" Source="ic_camera_alt.png" VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+
+                    </StackLayout.GestureRecognizers>
+
+                </StackLayout>
+                <StackLayout Spacing="0" Grid.Column="3" BackgroundColor="White" >
+                    <Image  x:Name="pho4"     HeightRequest="40" Source="ic_settings.png" VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

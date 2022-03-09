@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>de-DE</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <ItemGroup>
+    <None Remove="MultilingualResources\App6.fr.xlf" />
+    <None Remove="MultilingualResources\App6.tr.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Plugin.Multilingual" Version="1.1.6-beta" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
+    <PackageReference Include="Xamarin.Toolkit.Effects" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Allgemeines_1.xaml.cs">
+      <DependentUpon>Allgemeines_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Allgemeines_2.xaml.cs">
+      <DependentUpon>Allgemeines_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Allgemeines_3.xaml.cs">
+      <DependentUpon>Allgemeines_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Allgemeines_4.xaml.cs">
+      <DependentUpon>Allgemeines_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Allgemeines_NoQE.xaml.cs">
+      <DependentUpon>Allgemeines_NoQE.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Allgemeines_5.xaml.cs">
+      <DependentUpon>Allgemeines_5.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bewaeltigung_1.xaml.cs">
+      <DependentUpon>Bewaeltigung_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bewaeltigung_2.xaml.cs">
+      <DependentUpon>Bewaeltigung_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bewaeltigung_3.xaml.cs">
+      <DependentUpon>Bewaeltigung_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bewaeltigung_4.xaml.cs">
+      <DependentUpon>Bewaeltigung_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bewaeltigung_5.xaml.cs">
+      <DependentUpon>Bewaeltigung_5.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bewaeltigung_6.xaml.cs">
+      <DependentUpon>Bewaeltigung_6.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bewegungseinschraenkungen.xaml.cs">
+      <DependentUpon>Bewegungseinschraenkungen.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Dokumentation_2.xaml.cs">
+      <DependentUpon>Dokumentation_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Dokumentation_1.xaml.cs">
+      <DependentUpon>Dokumentation_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Einschaetzung.xaml.cs">
+      <DependentUpon>Einschaetzung.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FirstPage_2017_1.xaml.cs">
+      <DependentUpon>FirstPage_2017_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FirstPage_2017_2.xaml.cs">
+      <DependentUpon>FirstPage_2017_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FirstPage_2018_1.xaml.cs">
+      <DependentUpon>FirstPage_2018_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FirstPage_2018_2.xaml.cs">
+      <DependentUpon>FirstPage_2018_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FirstPage_2019_1.xaml.cs">
+      <DependentUpon>FirstPage_2019_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FreiheitsentziehendeMassnahmen_1.xaml.cs">
+      <DependentUpon>FreiheitsentziehendeMassnahmen_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FreiheitsentziehendeMassnahmen_2.xaml.cs">
+      <DependentUpon>FreiheitsentziehendeMassnahmen_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Gestaltung_1.xaml.cs">
+      <DependentUpon>Gestaltung_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Heimeinzug_1.xaml.cs">
+      <DependentUpon>Heimeinzug_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Heimeinzug_2.xaml.cs">
+      <DependentUpon>Heimeinzug_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Koerpergroesse_1.xaml.cs">
+      <DependentUpon>Koerpergroesse_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CategoryPageNoQE.xaml.cs">
+      <DependentUpon>CategoryPageNoQE.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Selbstversorgung_1.xaml.cs">
+      <DependentUpon>Selbstversorgung_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Selbstversorgung_4.xaml.cs">
+      <DependentUpon>Selbstversorgung_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Verhaltensweisen_1.xaml.cs">
+      <DependentUpon>Verhaltensweisen_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Verhaltensweisen_2.xaml.cs">
+      <DependentUpon>Verhaltensweisen_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Verhaltensweisen_3.xaml.cs">
+      <DependentUpon>Verhaltensweisen_3.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Allgemeines_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Allgemeines_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Allgemeines_3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Allgemeines_4.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Allgemeines_5.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bewaeltigung_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bewaeltigung_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bewaeltigung_3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bewaeltigung_4.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bewaeltigung_5.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bewaeltigung_6.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bewegungseinschraenkungen.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Camera.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ContactForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dekubitus_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dokumentation_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dokumentation_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Einschaetzung.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FirstPage_2019_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FirstPage_2018_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FirstPage_2018_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FirstPage_2017_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FirstPage_2017_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FirstPage_2019_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FreiheitsentziehendeMassnahmen_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FreiheitsentziehendeMassnahmen_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Gestaltung_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Gestaltung_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Gestaltung_3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Heimeinzug_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Heimeinzug_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Indikatoren.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Indikatoren1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Kognitive_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Kognitive_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Kognitive_3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Koerpergroesse_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListOfPatients.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RegisterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Medikamente_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Mobilitaet_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Mobilitaet_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Mobilitaet_3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Schmerzen_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Schmerzen_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Selbstversorgung_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Selbstversorgung_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Selbstversorgung_3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Selbstversorgung_4.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Selbstversorgung_5.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Sturzfolgen.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Verhaltensweisen_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Verhaltensweisen_2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Verhaltensweisen_3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\App6.fr.xlf" />
+    <XliffResource Include="MultilingualResources\App6.tr.xlf" />
+  </ItemGroup>
+</Project>

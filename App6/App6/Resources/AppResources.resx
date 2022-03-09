@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InformationButton" xml:space="preserve">
+    <value>Project Information</value>
+    <comment>Projektinformationen</comment>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>Login</value>
+    <comment>Anmelden</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="LoginPageHeadline" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="SignInButton" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>LANGUAGE</value>
+    <comment>SPRACHE</comment>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Login credentials are incorrect!</value>
+  </data>
+  <data name="LoginSuccess" xml:space="preserve">
+    <value>You have been successfully registered.</value>
+  </data>
+  <data name="RegisterName" xml:space="preserve">
+    <value>Enter username</value>
+  </data>
+  <data name="RegisterPageHeadline" xml:space="preserve">
+    <value>REGISTRATION</value>
+  </data>
+  <data name="RegisterPassword" xml:space="preserve">
+    <value>Enter your password</value>
+  </data>
+  <data name="RegisterPasswordConfirm" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="RoleFour" xml:space="preserve">
+    <value>User Role 4</value>
+  </data>
+  <data name="RoleOne" xml:space="preserve">
+    <value>User Role 1</value>
+  </data>
+  <data name="RoleThree" xml:space="preserve">
+    <value>User Role 3</value>
+  </data>
+  <data name="RoleTwo" xml:space="preserve">
+    <value>User Role 2</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>CANCEL</value>
+    <comment>ABBRECHEN</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="LoginNotAvailable" xml:space="preserve">
+    <value>Login is currently not possible. Please try again later.</value>
+  </data>
+  <data name="LoginNotYetAvailable" xml:space="preserve">
+    <value>Login is not available until 1 October 2019. Please try again later.</value>
+  </data>
+  <data name="PasswordLowComplexity" xml:space="preserve">
+    <value>Your password should contain at least one number (0-9) and one sign (like @, §, $, %, #).</value>
+  </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+  </data>
+  <data name="PasswordShort" xml:space="preserve">
+    <value>Your password is too short. Minimum length is 6 character.</value>
+  </data>
+  <data name="RegisterContactDBFailure" xml:space="preserve">
+    <value>Please contact admin.</value>
+  </data>
+  <data name="RegisterEmptyFields" xml:space="preserve">
+    <value>Please fill out all required fields in the registration form.</value>
+  </data>
+  <data name="RegisterFailed" xml:space="preserve">
+    <value>Registration failed</value>
+    <comment>Registrierung fehlgeschlagen</comment>
+  </data>
+  <data name="RegisterSelectRole" xml:space="preserve">
+    <value>Please select a user role.</value>
+    <comment>Bitte wählen Sie eine Benutzerrolle aus.</comment>
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>Registration successful</value>
+    <comment>Registrierung erfolgreich</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleFour" xml:space="preserve">
+    <value>You have successfully registered in user role 4. Please log in now.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 4 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleOne" xml:space="preserve">
+    <value>You have successfully registered in user role 1. Please log in now.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 1 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleThree" xml:space="preserve">
+    <value>You have successfully registered in user role 3. Please log in now.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 3 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleTwo" xml:space="preserve">
+    <value>You have successfully registered in user role 2. Please log in now.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 2 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterUnknownInQSUser" xml:space="preserve">
+    <value>Username is not registered in the InQS Web System. Please use valid username.</value>
+  </data>
+  <data name="RegisterWrongRole" xml:space="preserve">
+    <value>Your selected role is not corresponding to the role in the InQS Web System.</value>
+  </data>
+  <data name="RegistrationNotYetAvailable" xml:space="preserve">
+    <value>Registration is not available until 16 September 2019. Please try again later.</value>
+    <comment>Die Registrierung ist erst ab dem 16. September 2019 möglich. Bitte versuchen Sie es später noch einmal.</comment>
+  </data>
+  <data name="UsernameTaken" xml:space="preserve">
+    <value>Username is already taken. Please change username.</value>
+  </data>
+  <data name="DatenschutzButton" xml:space="preserve">
+    <value>Privacy statement</value>
+    <comment>Datenschutzerklärung</comment>
+  </data>
+  <data name="LoginWrongAppVersion" xml:space="preserve">
+    <value>You are using an outdated app version, please update your app via the Google Play Store.</value>
+  </data>
+  <data name="PreferenceLabel" xml:space="preserve">
+    <value>Preferences</value>
+    <comment>Einstellungen</comment>
+  </data>
+  <data name="PreferenceLabelBenutzername" xml:space="preserve">
+    <value>Username:</value>
+    <comment>Benutzername:</comment>
+  </data>
+  <data name="PreferenceLabelBenutzerrolle" xml:space="preserve">
+    <value>User role:</value>
+    <comment>Benutzerrolle:</comment>
+  </data>
+  <data name="PreferenceLabelEinrichtung" xml:space="preserve">
+    <value>Institution:</value>
+    <comment>Einrichtung:</comment>
+  </data>
+  <data name="PreferenceLabelWohnbereich" xml:space="preserve">
+    <value>Institution area:</value>
+    <comment>Wohnbereich:</comment>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InformationSaveQuery" xml:space="preserve">
+    <value>Would you like to save the data?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="FieldsUnfilled" xml:space="preserve">
+    <value>Please answer the red marked question item(s).</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ResetCategoryWarning" xml:space="preserve">
+    <value>Would you like to reset the category data?</value>
+    <comment>Wollen Sie die Daten der Kategorie wirklich zürucksetzen?</comment>
+  </data>
+  <data name="CreateSurvey" xml:space="preserve">
+    <value>Create Surveys</value>
+    <comment>Erhebungsbögen anlegen</comment>
+  </data>
+  <data name="ShowSurvey" xml:space="preserve">
+    <value>Show Surveys</value>
+    <comment>Erhebungsbögen anzeigen</comment>
+  </data>
+  <data name="SurveyHeadline" xml:space="preserve">
+    <value>Data entry form for quality recording</value>
+    <comment>Erhebungsbogen zur Qualitätserfassung</comment>
+  </data>
+  <data name="SurveyHeadlineFor" xml:space="preserve">
+    <value>for</value>
+    <comment>für</comment>
+  </data>
+  <data name="ResetCategoryImpossibleWarning" xml:space="preserve">
+    <value>The category cannot be reset because the evaluation period is already over.</value>
+  </data>
+  <data name="AppError" xml:space="preserve">
+    <value>Error</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="AppErrorMsg" xml:space="preserve">
+    <value>An error has occurred. Please check your internet connection or correct your input and try again.</value>
+  </data>
+  <data name="SurveyHeadlineWithoutQE" xml:space="preserve">
+    <value>Data entry form without quality recording</value>
+    <comment>Erhebungsbogen ohne Qualitätserfassung</comment>
+  </data>
+</root>

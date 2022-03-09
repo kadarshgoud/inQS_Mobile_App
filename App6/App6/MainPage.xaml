@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:App6.Helpers;assembly=App6"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Name="MenuItem1"
+            Icon="ic_arrow_back.png"
+            Order="Primary"
+            Priority="0"
+            Text="    "/>
+        <ToolbarItem
+            Name="MenuItem2"
+            Order="Primary"
+            Priority="1"
+            Text=""/>
+        <ToolbarItem
+            Name="MenuItem3"
+            Order="Primary"
+            Priority="2"
+            Text=""/>
+        <ToolbarItem
+            Name="MenuItem4"
+            Order="Primary"
+            Priority="3"
+            Text=""/>
+        <ToolbarItem
+            Name="MenuItem5"
+            Order="Primary"
+            Priority="4"
+            Text=""/>
+        <ToolbarItem
+            Name="MenuItem5"
+            Order="Primary"
+            Priority="5"
+            Text=""/>
+        <ToolbarItem
+            Name="MenuItem5"
+            Order="Primary"
+            Priority="6"
+            Text=""/>
+        <ToolbarItem
+            Name="MenuItem7"
+            Icon="ic_arrow_forward.png"
+            Order="Primary"
+            Priority="6"/>
+        <ToolbarItem
+            Name="MenuItem8"
+            Order="Primary"
+            Priority="8"
+            Text="        "/>
+        <ToolbarItem
+            Name="MenuItem9"
+            Order="Primary"
+            Priority="9"
+            Text=""/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#e9e9e9">
+                <Label
+                    Margin="0,20,0,0"
+                    BackgroundColor="#e9e9e9"
+                    FontAttributes="Bold"
+                    FontFamily="Montserrat"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    Text="Indikatorengestützte Qualitätsförderung"
+                    TextColor="#d4000f"
+                    VerticalOptions="Center"/>
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="#e9e9e9">
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    Source="appSymbol1024.png"
+                    VerticalOptions="Center"
+                    WidthRequest="200"/>
+            </Grid>
+            <Grid Grid.Row="2" BackgroundColor="#e9e9e9">
+                <Label
+                    x:Name="Versionsnummer"
+                    Margin="0,0,0,10"
+                    FontSize="10"
+                    HorizontalOptions="Center"
+                    Text="v1.3.2"
+                    VerticalOptions="Center"/>
+            </Grid>
+            <Grid Grid.Row="3" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.Column="0"
+                    Margin="5"
+                    HorizontalOptions="End"
+                    Source="ic_language_1.png"
+                    VerticalOptions="Center"/>
+
+                <Label
+                    x:Name="LanguagePickerLabel"
+                    Grid.Column="1"
+                    FontSize="15"
+                    HorizontalOptions="Start"
+                    Text="{i18n:Translate Language}"
+                    VerticalOptions="Center"/>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Picker
+                    x:Name="LanguagePicker"
+                    HorizontalOptions="Center"
+                    ItemDisplayBinding="{Binding DisplayName}"
+                    ItemsSource="{Binding Languages}"
+                    VerticalOptions="Center"
+                    WidthRequest="80"/>
+            </Grid>
+            <Grid Grid.Row="5" HeightRequest="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button
+                    x:Name="SignInButton"
+                    Grid.Row="0"
+                    BackgroundColor="#d4000f"
+                    BorderRadius="30"
+                    Clicked="Button_LoginPage_Clicked"
+                    FontFamily="MediumFontFamily"
+                    FontSize="14"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Image="ic_account_circle.png"
+                    Text="{i18n:Translate SignInButton}"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    WidthRequest="250"/>
+                <Button
+                    x:Name="InformationButton"
+                    Grid.Row="2"
+                    BackgroundColor="#2d2d2d"
+                    BorderRadius="30"
+                    Clicked="Button_ProjectInfo_Clicked"
+                    FontFamily="MediumFontFamily"
+                    FontSize="12"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Image="ic_info.png"
+                    Text="{i18n:Translate InformationButton}"
+                    TextColor="White"
+                    TranslationY="-18"
+                    VerticalOptions="Center"
+                    WidthRequest="250"/>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
+

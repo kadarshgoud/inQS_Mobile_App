@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InformationButton" xml:space="preserve">
+    <value>Informations de projet</value>
+    <comment>Projektinformationen</comment>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>S'identifier</value>
+    <comment>Anmelden</comment>
+  </data>
+  <data name="LoginPageHeadline" xml:space="preserve">
+    <value>S'IDENTIFIER</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>S'inscrire</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="SignInButton" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Les identifiants de connexion sont incorrects!</value>
+  </data>
+  <data name="LoginSuccess" xml:space="preserve">
+    <value>Vous avez été enregistré avec succès.</value>
+  </data>
+  <data name="RoleFour" xml:space="preserve">
+    <value>Rôle d'utilisateur 4</value>
+  </data>
+  <data name="RoleOne" xml:space="preserve">
+    <value>Rôle d'utilisateur 1</value>
+  </data>
+  <data name="RoleThree" xml:space="preserve">
+    <value>Rôle d'utilisateur 3</value>
+  </data>
+  <data name="RoleTwo" xml:space="preserve">
+    <value>Rôle d'utilisateur 2</value>
+  </data>
+  <data name="RegisterName" xml:space="preserve">
+    <value>Saisissez votre nom d'utilisateur</value>
+  </data>
+  <data name="RegisterPageHeadline" xml:space="preserve">
+    <value>ENREGISTREMENT</value>
+  </data>
+  <data name="RegisterPassword" xml:space="preserve">
+    <value>Tapez votre mot de passe</value>
+  </data>
+  <data name="RegisterPasswordConfirm" xml:space="preserve">
+    <value>Répéter le mot de passe</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>LA LANGUE</value>
+    <comment>SPRACHE</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ANNULER</value>
+    <comment>ABBRECHEN</comment>
+  </data>
+  <data name="LoginNotAvailable" xml:space="preserve">
+    <value>La connexion est actuellement impossible. Veuillez réessayer plus tard.</value>
+  </data>
+  <data name="LoginNotYetAvailable" xml:space="preserve">
+    <value>La connexion n'est pas disponible avant le 1er octobre 2019. Veuillez réessayer plus tard.</value>
+  </data>
+  <data name="RegisterFailed" xml:space="preserve">
+    <value>Échec de l'enregistrement</value>
+    <comment>Registrierung fehlgeschlagen</comment>
+  </data>
+  <data name="RegisterSelectRole" xml:space="preserve">
+    <value>Veuillez sélectionner un rôle d'utilisateur.</value>
+    <comment>Bitte wählen Sie eine Benutzerrolle aus.</comment>
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>inscription réussi</value>
+    <comment>Registrierung erfolgreich</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleFour" xml:space="preserve">
+    <value>Vous vous êtes enregistré avec succès dans le rôle d'utilisateur 4. Veuillez vous connecter maintenant.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 4 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleOne" xml:space="preserve">
+    <value>Vous vous êtes enregistré avec succès dans le rôle d'utilisateur 1. Veuillez vous connecter maintenant.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 1 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleThree" xml:space="preserve">
+    <value>Vous vous êtes enregistré avec succès dans le rôle d'utilisateur 3. Veuillez vous connecter maintenant.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 3 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegisterSuccessTextRoleTwo" xml:space="preserve">
+    <value>Vous vous êtes enregistré avec succès dans le rôle d'utilisateur 2. Veuillez vous connecter maintenant.</value>
+    <comment>Sie haben sich erfolgreich in der Benutzerrolle 2 registriert. Bitte loggen Sie sich jetzt ein.</comment>
+  </data>
+  <data name="RegistrationNotYetAvailable" xml:space="preserve">
+    <value>L'inscription n'est pas disponible avant le 16 septembre 2019. Veuillez réessayer plus tard.</value>
+    <comment>Die Registrierung ist erst ab dem 16. September 2019 möglich. Bitte versuchen Sie es später noch einmal.</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="PasswordLowComplexity" xml:space="preserve">
+    <value>Votre mot de passe doit contenir au moins un chiffre (0 à 9) et un signe (comme @, §, $,%, #).</value>
+  </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>Le mot de passe et le mot de passe de confirmation ne correspondent pas.</value>
+  </data>
+  <data name="PasswordShort" xml:space="preserve">
+    <value>Votre mot de passe est trop court. La longueur minimale est de 6 caractères.</value>
+  </data>
+  <data name="UsernameTaken" xml:space="preserve">
+    <value>Nom d'utilisateur déjà pris. S'il vous plaît changer de nom d'utilisateur.</value>
+  </data>
+  <data name="RegisterEmptyFields" xml:space="preserve">
+    <value>Veuillez remplir tous les champs obligatoires du formulaire d'inscription.</value>
+  </data>
+  <data name="RegisterUnknownInQSUser" xml:space="preserve">
+    <value>Le nom d'utilisateur n'est pas enregistré dans le système Web InQS. Veuillez utiliser un nom d'utilisateur valide.</value>
+  </data>
+  <data name="RegisterWrongRole" xml:space="preserve">
+    <value>Le rôle que vous avez sélectionné ne correspond pas à celui du système Web InQS.</value>
+  </data>
+  <data name="RegisterContactDBFailure" xml:space="preserve">
+    <value>S'il vous plaît contacter admin.</value>
+  </data>
+  <data name="LoginWrongAppVersion" xml:space="preserve">
+    <value>Vous utilisez une version obsolète de l'application, mettez-la à jour via le Google Play Store.</value>
+  </data>
+  <data name="DatenschutzButton" xml:space="preserve">
+    <value>Déclaration de confidentialité</value>
+    <comment>Datenschutzerklärung</comment>
+  </data>
+  <data name="PreferenceLabelBenutzername" xml:space="preserve">
+    <value>Nom d'utilisateur:</value>
+    <comment>Benutzername:</comment>
+  </data>
+  <data name="PreferenceLabelBenutzerrolle" xml:space="preserve">
+    <value>Rôle d'utilisateur:</value>
+    <comment>Benutzerrolle:</comment>
+  </data>
+  <data name="PreferenceLabelEinrichtung" xml:space="preserve">
+    <value>Institution:</value>
+    <comment>Einrichtung:</comment>
+  </data>
+  <data name="PreferenceLabelWohnbereich" xml:space="preserve">
+    <value>Domaine de l'institution:</value>
+    <comment>Wohnbereich:</comment>
+  </data>
+  <data name="PreferenceLabel" xml:space="preserve">
+    <value>Préférences</value>
+    <comment>Einstellungen</comment>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>l'information</value>
+  </data>
+  <data name="InformationSaveQuery" xml:space="preserve">
+    <value>Voulez-vous sauvegarder les données?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="FieldsUnfilled" xml:space="preserve">
+    <value>Veuillez répondre aux questions marquées en rouge.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="ResetCategoryWarning" xml:space="preserve">
+    <value>Voulez-vous réinitialiser les données de catégorie?</value>
+    <comment>Wollen Sie die Daten der Kategorie wirklich zürucksetzen?</comment>
+  </data>
+  <data name="CreateSurvey" xml:space="preserve">
+    <value>Créer des sondages</value>
+    <comment>Erhebungsbögen anlegen</comment>
+  </data>
+  <data name="ShowSurvey" xml:space="preserve">
+    <value>Afficher les sondages</value>
+    <comment>Erhebungsbögen anzeigen</comment>
+  </data>
+  <data name="SurveyHeadline" xml:space="preserve">
+    <value>Formulaire de saisie de données pour un enregistrement de qualité</value>
+    <comment>Erhebungsbogen zur Qualitätserfassung</comment>
+  </data>
+  <data name="SurveyHeadlineFor" xml:space="preserve">
+    <value>pour</value>
+    <comment>für</comment>
+  </data>
+  <data name="ResetCategoryImpossibleWarning" xml:space="preserve">
+    <value>La catégorie ne peut pas être réinitialisée car la période d'évaluation est déjà terminée.</value>
+  </data>
+  <data name="AppError" xml:space="preserve">
+    <value>Erreur</value>
+    <comment>Fehler</comment>
+  </data>
+  <data name="AppErrorMsg" xml:space="preserve">
+    <value>Une erreur est survenue. Veuillez vérifier votre connexion Internet ou corriger votre saisie et réessayer.</value>
+  </data>
+  <data name="SurveyHeadlineWithoutQE" xml:space="preserve">
+    <value>Formulaire de saisie de données sans enregistrement de qualité</value>
+    <comment>Erhebungsbogen ohne Qualitätserfassung</comment>
+  </data>
+</root>

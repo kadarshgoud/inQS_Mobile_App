@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.FirstPage_2018_1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:App6.Helpers;assembly=App6"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="44"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Grid BackgroundColor="#e9e9e9">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        HeightRequest="50"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="(4/6)"
+                        TextColor="Black"
+                        TranslationY="37"
+                        VerticalOptions="StartAndExpand"
+                        WidthRequest="50"/>
+                    <Frame
+                        Grid.Row="0"
+                        Margin="20,75,20,10"
+                        Padding="15"
+                        BackgroundColor="White"
+                        CornerRadius="10">
+                        <Grid Padding="0" RowSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <BoxView
+                                Grid.Row="1"
+                                Margin="0,0,0,0"
+                                HeightRequest="3"
+                                Color="#d4000f"/>
+                            <Image
+                                Grid.Row="0"
+                                Margin="0,0,15,0"
+                                HeightRequest="40"
+                                HorizontalOptions="StartAndExpand"
+                                Source="ic_arrow_back_ios_b.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="40">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                Grid.Row="0"
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="   Qualitätserfassung 1/18   "
+                                TextColor="#d4000f"/>
+                            <Image
+                                Grid.Row="0"
+                                Margin="15,0,0,0"
+                                HeightRequest="40"
+                                HorizontalOptions="EndAndExpand"
+                                Source="ic_navigate_next.png"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="40">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label
+                                Grid.Row="2"
+                                FontSize="15"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="Übersicht der Erhebungsbögen"
+                                TextColor="Gray"/>
+                            <Label
+                                x:Name="OpenSurveyCount"
+                                Grid.Row="3"
+                                Margin="33,20,0,0"
+                                FontAttributes="Bold"
+                                FontSize="30"
+                                HorizontalOptions="StartAndExpand"
+                                TextColor="Black"/>
+                            <Label
+                                x:Name="FinishedSurveyCount"
+                                Grid.Row="3"
+                                Margin="0,20,72,0"
+                                FontAttributes="Bold"
+                                FontSize="30"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="Black"/>
+                            <Label
+                                Grid.Row="4"
+                                Margin="30,10,0,0"
+                                FontAttributes="Bold"
+                                FontSize="Micro"
+                                HorizontalOptions="StartAndExpand"
+                                Text="OFFEN"
+                                TextColor="Gray"/>
+                            <Label
+                                Grid.Row="4"
+                                Margin="0,10,44,0"
+                                FontAttributes="Bold"
+                                FontSize="Micro"
+                                HorizontalOptions="EndAndExpand"
+                                Text="ABGESCHLOSSEN"
+                                TextColor="Gray"
+                                TranslationX="-24"/>
+                        </Grid>
+                    </Frame>
+                    <Frame
+                        Grid.Row="1"
+                        Margin="20,10,20,80"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="#2D2D2D">
+                        <Grid Padding="0" RowSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label
+                                Grid.Row="0"
+                                Margin="0,2,0,0"
+                                Font="15"
+                                FontAttributes="Bold"
+                                FontFamily="MediumFontFamily"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{i18n:Translate ShowSurvey}"
+                                TextColor="#d4000f"/>
+                            <BoxView
+                                Grid.Row="1"
+                                Margin="0,3,0,0"
+                                BackgroundColor="#d4000f"
+                                HeightRequest="3"
+                                HorizontalOptions="FillAndExpand"/>
+                            <Button
+                                Grid.Row="2"
+                                Margin="20"
+                                BackgroundColor="#d4000f"
+                                BorderRadius="30"
+                                Clicked="Button_Clicked"
+                                FontFamily="MediumFontFamily"
+                                FontSize="14"
+                                HeightRequest="45"
+                                Text="LISTE DER BEWOHNER"
+                                TextColor="White"
+                                TranslationY="0"/>
+                            <BoxView
+                                Grid.Row="3"
+                                Margin="0,0,0,25"
+                                BackgroundColor="Silver"
+                                HeightRequest="1"
+                                HorizontalOptions="FillAndExpand"
+                                TranslationY="30"/>
+                            <!--<Label
+                                Grid.Row="4"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                HorizontalOptions="StartAndExpand"
+                                Text="DETAILS"
+                                TextColor="#d4000f"
+                                TranslationY="0">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label
+                                Grid.Row="4"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                HorizontalOptions="EndAndExpand"
+                                Text="STATISTIK"
+                                TextColor="#d4000f"
+                                TranslationY="0"/>-->
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+            <BoxView
+                Grid.Row="1"
+                BackgroundColor="Black"
+                HeightRequest="1"/>
+            <Grid
+                Grid.Row="2"
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Column="0"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="pho"
+                        HeightRequest="40"
+                        Source="ic_home.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="pho2"
+                        HeightRequest="40"
+                        Source="ic_view_list.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="3"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="pho3"
+                        HeightRequest="38"
+                        Source="ic_logout.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    Spacing="0">
+                    <Image
+                        x:Name="pho4"
+                        HeightRequest="40"
+                        Source="ic_settings.png"
+                        VerticalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

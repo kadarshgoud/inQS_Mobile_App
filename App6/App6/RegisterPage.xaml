@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App6.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:App6.Helpers;assembly=App6">
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="#e9e9e9" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="0"
+                FontSize="Medium"
+                HorizontalOptions="CenterAndExpand"
+                Text="{i18n:Translate RegisterPageHeadline}"
+                TextColor="#2d2d2d"
+                VerticalOptions="CenterAndExpand"/>
+
+            <Image
+                Grid.Row="1"
+                HorizontalOptions="CenterAndExpand"
+                Source="inqs_logo.png"
+                VerticalOptions="StartAndExpand"/>
+
+            <!--  Selection 1  -->
+            <Grid Grid.Row="2" Margin="15,0,15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <Image
+                        x:Name="RoleButton_1"
+                        HorizontalOptions="End"
+                        Source="ic_rb2.png"
+                        VerticalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Role_1_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <Label
+                    Grid.Column="1"
+                    FontFamily="MediumFontFamily"
+                    FontSize="18"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{i18n:Translate RoleOne}"
+                    VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+            <!--  Selection 2  -->
+            <Grid Grid.Row="3" Margin="15,0,15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <Image
+                        x:Name="RoleButton_2"
+                        HorizontalOptions="End"
+                        Source="ic_rb2.png"
+                        VerticalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Role_2_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <Label
+                    Grid.Column="1"
+                    FontFamily="MediumFontFamily"
+                    FontSize="18"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{i18n:Translate RoleTwo}"
+                    VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+            <!--  Selection 3  -->
+            <Grid Grid.Row="4" Margin="15,0,15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <Image
+                        x:Name="RoleButton_3"
+                        HorizontalOptions="End"
+                        Source="ic_rb2.png"
+                        VerticalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Role_3_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <Label
+                    Grid.Column="1"
+                    FontFamily="MediumFontFamily"
+                    FontSize="18"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{i18n:Translate RoleThree}"
+                    VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+            <!--  Selection 4  -->
+            <!--
+            <Grid Grid.Row="5"  Margin="15,0,15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0">
+                <Image
+                    x:Name="RoleButton_4"
+                    HorizontalOptions="End"
+                    Source="ic_rb2.png"
+                    VerticalOptions="Center"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Role_4_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <Label
+                Grid.Column="1"
+                FontFamily="MediumFontFamily"
+                FontSize="18"
+                HorizontalOptions="StartAndExpand"
+                Text="Text="{i18n:Translate RoleFour}""
+                VerticalOptions="CenterAndExpand"/>
+
+            </Grid>
+            -->
+
+            <Entry
+                x:Name="user"
+                Grid.Row="6"
+                Margin="15,0,15,0"
+                BackgroundColor="White"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="{i18n:Translate RegisterName}"/>
+
+            <Entry
+                x:Name="pass"
+                Grid.Row="7"
+                Margin="15,0,15,0"
+                BackgroundColor="White"
+                HorizontalOptions="FillAndExpand"
+                IsPassword="True"
+                Placeholder="{i18n:Translate RegisterPassword}"/>
+
+            <Entry
+                x:Name="passConfirm"
+                Grid.Row="8"
+                Margin="15,0,15,0"
+                BackgroundColor="White"
+                HorizontalOptions="FillAndExpand"
+                IsPassword="True"
+                Placeholder="{i18n:Translate RegisterPasswordConfirm}"/>
+
+            <Button
+                Grid.Row="9"
+                BackgroundColor="#d4000f"
+                BorderRadius="30"
+                Clicked="Button_Register_Clicked"
+                FontFamily="MediumFontFamily"
+                FontSize="14"
+                HeightRequest="50"
+                HorizontalOptions="CenterAndExpand"
+                Text="{i18n:Translate RegisterButton}"
+                TextColor="White"
+                TranslationY="20"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="230"/>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
